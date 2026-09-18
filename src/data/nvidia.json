@@ -351,9 +351,27 @@
       "sources": ["https://docs.nvidia.com/ai-enterprise/release-7/latest/infra-software/vgpu/reference/hopper.html", "https://www.tomshardware.com/pc-components/gpus/new-nvidia-ai-gpus-designed-to-get-around-u-s-export-bans-come-to-china-h20-l20-and-l2-to-fill-void-left-by-restricted-models", "https://inferencebench.io/gpus/nvidia-h20/", "https://flopper.io/gpu/nvidia-h20-96gb/spec-sheet"], "confidence": "medium", "status": "secondary"
     },
     {
+      "name": "NVIDIA H800 PCIe 80GB", "vendor": "NVIDIA", "segment": "data-center", "architecture": "Hopper", "releaseDate": "2023-03-21",
+      "vramGB": 80, "memoryType": "HBM2e ECC", "bandwidthGBs": 2000, "busWidth": 5120,
+      "fp64": 0.8, "fp32": 51, "tf32Dense": 378, "tf32Sparse": 756, "bf16Dense": 756.5, "bf16Sparse": 1513, "fp16Dense": {"value": 756.5, "accumulate": "not specified"}, "fp16Sparse": {"value": 1513, "accumulate": "not specified"}, "fp8Dense": 1513, "fp8Sparse": 3026, "fp6": null, "fp4": null, "int8Dense": 1513, "int8Sparse": 3026, "int4": null,
+      "computeUnitsSM": 114, "shaderCUDA": 14592, "matrixTensorCores": 456, "rtCores": 0, "interconnect": "NVLink 4 400GB/s; PCIe 5.0 x16 128GB/s", "tdpTbp": 350,
+      "msrp": null, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP64", "FP64 Tensor", "FP32", "TF32", "BF16", "FP16", "FP8 E4M3/E5M2", "INT8"], "notes": "The NVIDIA-authored 2023 product brief marks the headline Tensor figures as structurally sparse; dense values are its official values divided by two. NVIDIA vGPU documentation confirms the PCIe 80GB board and MIG profiles. The 2023-03-21 date is the first public shipment confirmation, not a formal NVIDIA newsroom launch date. No public MSRP or current public USD rental quote was found.",
+      "sources": ["https://docs.nvidia.com/ai-enterprise/release-8/latest/infra-software/vgpu/reference/hopper-h800.html", "https://serverflow.ru/upload/iblock/88a/2fg6cfwqo83oxx9nynevdxkdllj1hbmg/%D0%A1%D0%BF%D0%B5%D1%86%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F%20NVIDIA%20H800.pdf", "https://lenovopress.lenovo.com/lp1814-thinksystem-nvidia-h800-pcie-gen5-gpu", "https://download.nvidia.com/XFree86/Linux-x86_64/590.48.01/README/supportedchips.html", "https://gpus.axiomgaming.net/gpu/h800-pcie-80-gb"], "confidence": "medium-high", "status": "derived"
+    },
+    {
+      "name": "NVIDIA H800 SXM5 80GB", "vendor": "NVIDIA", "segment": "data-center", "architecture": "Hopper", "releaseDate": "2023-03-21",
+      "vramGB": 80, "memoryType": "HBM3 ECC", "bandwidthGBs": 3350, "busWidth": 5120,
+      "fp64": 1, "fp32": 67, "tf32Dense": 494.5, "tf32Sparse": 989, "bf16Dense": 989.5, "bf16Sparse": 1979, "fp16Dense": {"value": 989.5, "accumulate": "not specified"}, "fp16Sparse": {"value": 1979, "accumulate": "not specified"}, "fp8Dense": 1979, "fp8Sparse": 3958, "fp6": null, "fp4": null, "int8Dense": 1979, "int8Sparse": 3958, "int4": null,
+      "computeUnitsSM": 132, "shaderCUDA": 16896, "matrixTensorCores": 528, "rtCores": 0, "interconnect": "NVLink 4 400GB/s; PCIe 5.0 128GB/s", "tdpTbp": 700,
+      "msrp": null, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP64", "FP64 Tensor", "FP32", "TF32", "BF16", "FP16", "FP8 E4M3/E5M2", "INT8"], "notes": "H800 SXM preserves H100-class low-precision Tensor throughput and 3.35TB/s HBM bandwidth, while FP64 and NVLink are restricted. The NVIDIA-authored 2023 product brief supplies the sparse values; dense values are those official figures divided by two. The 2023-03-21 date is the first public shipment confirmation, not a formal NVIDIA newsroom launch date.",
+      "sources": ["https://docs.nvidia.com/ai-enterprise/release-8/latest/infra-software/vgpu/reference/hopper-h800.html", "https://serverflow.ru/upload/iblock/88a/2fg6cfwqo83oxx9nynevdxkdllj1hbmg/%D0%A1%D0%BF%D0%B5%D1%86%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F%20NVIDIA%20H800.pdf", "https://www.storagereview.com/news/how-deepseek-r1-overcame-hardware-limitations-to-deliver-ai-breakthroughs", "https://download.nvidia.com/XFree86/Linux-x86_64/590.48.01/README/supportedchips.html"], "confidence": "medium-high", "status": "derived"
+    },
+    {
       "name": "NVIDIA H100 PCIe 80GB", "vendor": "NVIDIA", "segment": "data-center", "architecture": "Hopper", "releaseDate": "2022-11-16",
       "vramGB": 80, "memoryType": "HBM2e/HBM3 by board revision", "bandwidthGBs": 2000, "busWidth": 5120,
-      "fp64": 24, "fp32": 48, "tf32Dense": 400, "tf32Sparse": 800, "bf16Dense": 800, "bf16Sparse": 1600, "fp16Dense": {"value": 800, "accumulate": "FP32"}, "fp16Sparse": {"value": 1600, "accumulate": "FP32"}, "fp8Dense": 1600, "fp8Sparse": 3200, "fp6": null, "fp4": null, "int8Dense": 1600, "int8Sparse": 3200, "int4": null,
+      "fp64": 24, "fp32": 48, "tf32Dense": 378, "tf32Sparse": 756, "bf16Dense": 756.5, "bf16Sparse": 1513, "fp16Dense": {"value": 756.5, "accumulate": "FP32"}, "fp16Sparse": {"value": 1513, "accumulate": "FP32"}, "fp8Dense": 1513, "fp8Sparse": 3026, "fp6": null, "fp4": null, "int8Dense": 1513, "int8Sparse": 3026, "int4": null,
       "computeUnitsSM": 114, "shaderCUDA": 14592, "matrixTensorCores": 456, "rtCores": 0, "interconnect": "PCIe 5.0 x16; 2-way NVLink bridge 600GB/s", "tdpTbp": 350,
       "msrp": null, "rentalHourlyUSD": 2.89, "rentalSamples": [{"platform": "RunPod Secure", "price": 2.89}, {"platform": "Lambda", "price": 3.29}, {"platform": "Hyperstack", "price": 2.50}],
       "nativeFormats": ["FP64", "FP64 Tensor", "FP32", "TF32", "BF16", "FP16", "FP8 E4M3/E5M2", "INT8"], "notes": "Shipping date used because original announcement was before four-year cutoff. Rental mean happens to round to 2.89.",
@@ -407,11 +425,11 @@
     {
       "name": "NVIDIA B300 SXM", "vendor": "NVIDIA", "segment": "data-center", "architecture": "Blackwell Ultra", "releaseDate": "2025-09-01",
       "vramGB": 288, "memoryType": "HBM3e", "bandwidthGBs": 8000, "busWidth": null,
-      "fp64": null, "fp32": 75, "tf32Dense": 1125, "tf32Sparse": 2250, "bf16Dense": 2250, "bf16Sparse": 4500, "fp16Dense": {"value": 2250, "accumulate": "FP32"}, "fp16Sparse": {"value": 4500, "accumulate": "FP32"}, "fp8Dense": 4500, "fp8Sparse": 9000, "fp6": {"dense": 4500, "sparse": 9000}, "fp4": {"dense": 13500, "sparse": 18000}, "int8Dense": null, "int8Sparse": null, "int4": null,
+      "fp64": 1.25, "fp32": 75, "tf32Dense": 1125, "tf32Sparse": 2250, "bf16Dense": 2250, "bf16Sparse": 4500, "fp16Dense": {"value": 2250, "accumulate": "FP32"}, "fp16Sparse": {"value": 4500, "accumulate": "FP32"}, "fp8Dense": 4500, "fp8Sparse": 9000, "fp6": {"dense": 4500, "sparse": 9000}, "fp4": {"dense": 13500, "sparse": 18000}, "int8Dense": 187.5, "int8Sparse": 375, "int4": null,
       "computeUnitsSM": null, "shaderCUDA": null, "matrixTensorCores": null, "rtCores": 0, "interconnect": "NVLink 5 1.8TB/s per GPU", "tdpTbp": null,
       "msrp": null, "rentalHourlyUSD": 7.41, "rentalSamples": [{"platform": "RunPod Secure", "price": 7.89}, {"platform": "RunPod Community", "price": 6.94}, {"platform": "Hyperstack", "price": 7.40}],
-      "nativeFormats": ["FP64", "FP32", "TF32", "BF16", "FP16", "FP8", "FP6", "NVFP4", "INT8"], "notes": "Official HGX page's INT8 scrape is internally inconsistent (3 POPS vs 72 POPS columns); INT8 left null instead of guessing. Therefore inclusion is provisional on architecture support, not a verified numeric threshold pass. FP4 is official sparse|dense divided by 8 GPUs.",
-      "sources": ["https://www.nvidia.com/en-au/data-center/hgx/", "https://docs.nvidia.com/dgx/dgxb300-user-guide/introduction-to-dgxb300.html", "https://docs.nvidia.com/enterprise-reference-architectures/whitepaper/hgx-servers-and-spectrum-x.pdf", "https://www.runpod.io/articles/guides/ai-server-cost", "https://www.hyperstack.cloud/gpu-pricing"], "confidence": "medium", "status": "official-derived"
+      "nativeFormats": ["FP64", "FP32", "TF32", "BF16", "FP16", "FP8", "FP6", "NVFP4", "INT8"], "notes": "Official HGX values are for an 8-GPU baseboard. Per-GPU values divide the system totals by eight; the official footnote marks INT8 as sparse, so 3 POPS system sparse becomes 375 TOPS sparse and 187.5 TOPS dense per GPU. FP4 is official sparse|dense divided by eight.",
+      "sources": ["https://www.nvidia.com/en-au/data-center/hgx/", "https://docs.nvidia.com/dgx/dgxb300-user-guide/introduction-to-dgxb300.html", "https://docs.nvidia.com/enterprise-reference-architectures/whitepaper/hgx-servers-and-spectrum-x.pdf", "https://www.runpod.io/articles/guides/ai-server-cost", "https://www.hyperstack.cloud/gpu-pricing"], "confidence": "high", "status": "derived"
     },
     {
       "name": "RTX PRO 6000 Blackwell Server Edition", "vendor": "NVIDIA", "segment": "data-center", "architecture": "Blackwell", "releaseDate": "2025-08-26",
@@ -429,6 +447,7 @@
     {"name": "A100/A30/A40/A10/A16", "reason": "launch predates window even when still sold/rented"},
     {"name": "GeForce laptop GPUs / RTX professional laptop GPUs", "reason": "excluded by scope normalization: mobile dGPU performance varies by OEM power limit and is not independently rentable"},
     {"name": "Grace Hopper GH200 / GB200 / GB300 Superchips and NVL rack systems", "reason": "not standalone discrete GPUs; database records standalone accelerator packages instead"},
+    {"name": "NVIDIA H800 NVL 94GB", "reason": "official SKU, 94GB capacity and 3.9TB/s bandwidth confirmed; reviewed public OEM compute fields remain TBD, so it cannot pass the numeric dense-INT8 gate without guessing"},
     {"name": "RTX 4090 D / 5090 D / 5090 D v2 / RTX 5880 Ada", "reason": "regional China-only derivatives; public official compute tables insufficient or inconsistent. Add in a separate regional-SKU pass."}
   ]
 }

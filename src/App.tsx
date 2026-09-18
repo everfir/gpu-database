@@ -77,7 +77,8 @@ function App() {
 
   const visible = useMemo(() => GPU_DATA.filter((gpu) => {
     const text = `${gpu.name} ${gpu.architecture} ${gpu.vendor}`.toLowerCase()
-    return text.includes(query.toLowerCase())
+    const queryTokens = query.trim().toLowerCase().split(/\s+/).filter(Boolean)
+    return queryTokens.every((token) => text.includes(token))
       && (vendor === '全部' || gpu.vendor === vendor)
       && (segment === '全部' || gpu.segment === segment)
       && gpu.vramGB >= minVram
@@ -133,7 +134,7 @@ function App() {
         <div className="filter-title"><SlidersHorizontal size={16} /><span>校准条件</span></div>
         <label className="search-box">
           <Search size={16} />
-          <Input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="搜索型号或架构" aria-label="搜索型号或架构" />
+          <Input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="搜索型号或架构，如 AMD R9700、H800" aria-label="搜索型号或架构" />
         </label>
         <label><span>厂商</span><select value={vendor} onChange={(event) => setVendor(event.target.value as Vendor | '全部')}>{VENDORS.map((item) => <option key={item}>{item}</option>)}</select></label>
         <label><span>类型</span><select value={segment} onChange={(event) => setSegment(event.target.value as Segment | '全部')}>{SEGMENTS.map((item) => <option key={item}>{item}</option>)}</select></label>

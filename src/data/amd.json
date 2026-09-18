@@ -244,7 +244,7 @@
       "cu": 64, "streamProcessors": 4096, "aiAccelerators": 128, "matrixCores": null, "rtAccelerators": 64, "interconnect": "PCIe 5.0 x16", "tbpW": 300,
       "msrp": {"amount": 1299, "currency": "USD", "kind": "SEP", "date": "2025-10-01"}, "rentalHourlyUSD": null,
       "nativeFormats": ["FP64", "FP32", "BF16", "FP16", "FP8 E4M3", "FP8 E5M2", "INT8", "INT4"],
-      "notes": "Linux-focused AI workstation card. Public rental quotes found in EUR/RUB were not converted into USD to avoid introducing an unstated FX assumption.",
+      "notes": "AMD announced the product on 2025-05-20; 2025-07-23 is the availability date for prebuilt workstations, while standalone cards were scheduled for 2025 Q3 without an exact public date. The $1,299 figure is an official MSRP evidenced on 2025-10-01, not a price stated in the launch release. ECC is supported on Linux. Public rental quotes found in EUR/RUB were not converted into USD to avoid introducing an unstated FX assumption.",
       "sourceUrls": ["https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700.html", "https://www.amd.com/en/blogs/2025/amd-radeon-ai-pro-r9700-to-be-available-in-workstation.html", "https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro.html", "https://hostkey.com/gpu-dedicated-servers/radeon/"], "confidence": "high"
     },
     {

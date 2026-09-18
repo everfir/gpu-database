@@ -152,7 +152,7 @@ type RawAmdRecord = {
   fp6?: { dense: number; sparse?: number | null; format?: string } | null; fp4?: { dense: number; sparse?: number | null; format?: string } | null
   int8Dense?: { value: number } | null; int8Sparse?: number | null; int4?: { dense: number; sparse?: number | null } | null
   cu?: number | null; streamProcessors?: number | null; aiAccelerators?: number | null; matrixCores?: number | null; rtAccelerators?: number | null
-  interconnect?: string | null; tbpW?: number | null; msrp?: { amount: number; currency: string; kind?: string } | null
+  interconnect?: string | null; tbpW?: number | null; msrp?: { amount: number; currency: string; kind?: string; date?: string } | null
   rentalHourlyUSD?: { value: number; date: string; platform: string; method: string; confidence: string; derived?: boolean } | null
   nativeFormats: string[]; notes?: string | null; sourceUrls: string[]; confidence: string
 }
@@ -178,7 +178,7 @@ function normalizeAmdRecord(raw: RawAmdRecord): GpuRecord {
     fp16: peak(raw.fp16Dense?.value, 'TFLOPS', raw.fp16Sparse), fp8: peak(raw.fp8Dense?.value, 'TFLOPS', raw.fp8Sparse), fp6: peak(raw.fp6?.dense, 'TFLOPS', raw.fp6?.sparse, raw.fp6?.format), fp4: peak(raw.fp4?.dense, 'TFLOPS', raw.fp4?.sparse, raw.fp4?.format),
     int8: peak(raw.int8Dense?.value, 'TOPS', raw.int8Sparse), int4: peak(raw.int4?.dense, 'TOPS', raw.int4?.sparse), parallelism, nativeFormats: raw.nativeFormats,
     interconnect: raw.interconnect, powerW: raw.tbpW, launchPriceUsd: raw.msrp?.currency === 'USD' ? raw.msrp.amount : null,
-    launchPriceNote: raw.msrp ? `${raw.msrp.kind ?? '发布价格'}${raw.msrp.currency !== 'USD' ? ` · ${raw.msrp.amount} ${raw.msrp.currency}` : ''}` : undefined,
+    launchPriceNote: raw.msrp ? `${raw.msrp.kind ?? '发布价格'}${raw.msrp.currency !== 'USD' ? ` · ${raw.msrp.amount} ${raw.msrp.currency}` : ''}${raw.msrp.date ? ` · 证据日期 ${raw.msrp.date}` : ''}` : undefined,
     rentalQuotes, evidence: raw.confidence === 'high' ? '官方+交叉核验' : '第三方交叉核验', notes: [raw.notes, raw.rentalHourlyUSD ? `租价口径：${raw.rentalHourlyUSD.method}（${raw.rentalHourlyUSD.confidence}）` : null].filter((note): note is string => Boolean(note)),
     sources: raw.sourceUrls.map((url, index) => ({ label: `${raw.name} 来源 ${index + 1}`, url, kind: /price|cloud|savrn|deploy|spheron|compute/i.test(url) ? 'rental' : 'spec' })),
   }

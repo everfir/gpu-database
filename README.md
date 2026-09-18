@@ -28,7 +28,7 @@ npm run preview
 
 ## 已覆盖
 
-NVIDIA、AMD、Intel、Huawei、Moore Threads、Qualcomm、Tenstorrent，共 90 个同时具备可核验发布日期、显存与 INT8 峰值的 SKU/板型。原始 JSON 仍保留发布日期待确认或证据不足的候选，不混入默认榜单。
+NVIDIA、AMD、Intel、Huawei、Moore Threads、Qualcomm、Tenstorrent，共 93 个同时具备可核验发布日期、显存与 INT8 峰值的 SKU/板型。原始 JSON 仍保留发布日期待确认或证据不足的候选，不混入默认榜单。
 
 ## 主要交互
 
