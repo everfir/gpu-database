@@ -1,0 +1,227 @@
+{
+  "metadata": {
+    "researchCutoff": "2026-09-18",
+    "releaseWindow": ["2022-09-18", "2026-09-18"],
+    "filters": {"minimumUsableVramGB": 8, "minimumDenseInt8TOPS": 66.06},
+    "method": "Official product pages/datasheets take precedence. No sparse number is used as dense. Deterministic arithmetic from an official architectural throughput ratio is explicitly tagged derived. Null means no trustworthy public number was found.",
+    "rentalPolicy": "Per-card public hourly offers only. Request-access pages, whole-server monthly quotes without a public price, and compute-provider payouts are not treated as rental prices."
+  },
+  "included": [
+    {
+      "id": "intel-arc-a770-16gb", "name": "Intel Arc A770 16GB", "vendor": "Intel", "segment": "consumer", "architecture": "Xe HPG (Alchemist)", "releaseDate": "2022-10-12",
+      "vramGB": 16, "memoryType": "GDDR6", "bandwidthGBs": 560, "busWidth": 256,
+      "compute": {"fp64": null, "fp32": {"dense": 17.2, "sparse": null, "unit": "TFLOPS", "provenance": "official/Intel launch material"}, "tf32": null, "bf16": {"dense": 131, "sparse": null, "unit": "TFLOPS", "provenance": "derived: official INT8 divided by 2 using Intel Xe-HPG XMX per-clock ratio"}, "fp16": {"dense": 131, "sparse": null, "unit": "TFLOPS", "provenance": "derived: official INT8 divided by 2 using Intel Xe-HPG XMX per-clock ratio"}, "fp8": null, "fp6": null, "fp4": null, "int8": {"dense": 262, "sparse": null, "unit": "TOPS", "provenance": "official"}, "int4": {"dense": 524, "sparse": null, "unit": "TOPS", "provenance": "derived: official INT8 multiplied by 2 using Intel Xe-HPG XMX per-clock ratio"}},
+      "parallelism": {"xeCores": 32, "xmxEngines": 512, "vectorEngines": 512, "rayTracingUnits": 32}, "interconnect": "PCIe 4.0 x16", "powerW": 225,
+      "msrp": {"usd": 349, "currency": "USD", "amount": 349, "note": "Intel Limited Edition launch MSRP"}, "rental": {"hourlyUSD": null, "date": "2026-09-18", "platform": null, "note": "No credible public per-card hourly market found."},
+      "nativeFormats": ["FP32", "FP16", "BF16", "INT8", "INT4", "INT2"], "notes": "FP8 is not listed as native on Alchemist XMX. Dense INT8 is Intel's published GPU Peak TOPS.",
+      "sources": ["https://www.intel.com/content/www/us/en/products/sku/229151/intel-arc-a770-graphics-16gb/specifications.html", "https://game.intel.com/us/stories/intel-arc-graphics-a7series-perf-per-dollar/", "https://www.intel.com/content/www/us/en/developer/articles/technical/introduction-to-the-xe-hpg-architecture.html"], "confidence": "high"
+    },
+    {
+      "id": "intel-arc-a770-8gb", "name": "Intel Arc A770 8GB", "vendor": "Intel", "segment": "consumer", "architecture": "Xe HPG (Alchemist)", "releaseDate": "2022-10-12",
+      "vramGB": 8, "memoryType": "GDDR6", "bandwidthGBs": 512, "busWidth": 256,
+      "compute": {"fp64": null, "fp32": {"dense": 17.2, "sparse": null, "unit": "TFLOPS", "provenance": "official/Intel launch material"}, "tf32": null, "bf16": {"dense": 131, "sparse": null, "unit": "TFLOPS", "provenance": "derived from official Xe-HPG XMX ratio"}, "fp16": {"dense": 131, "sparse": null, "unit": "TFLOPS", "provenance": "derived from official Xe-HPG XMX ratio"}, "fp8": null, "fp6": null, "fp4": null, "int8": {"dense": 262, "sparse": null, "unit": "TOPS", "provenance": "official"}, "int4": {"dense": 524, "sparse": null, "unit": "TOPS", "provenance": "derived from official Xe-HPG XMX ratio"}},
+      "parallelism": {"xeCores": 32, "xmxEngines": 512, "vectorEngines": 512, "rayTracingUnits": 32}, "interconnect": "PCIe 4.0 x16", "powerW": 225,
+      "msrp": {"usd": 329, "currency": "USD", "amount": 329, "note": "launch MSRP"}, "rental": {"hourlyUSD": null, "date": "2026-09-18", "platform": null, "note": "No credible public per-card hourly market found."},
+      "nativeFormats": ["FP32", "FP16", "BF16", "INT8", "INT4", "INT2"], "notes": "Same compute die as the 16GB SKU; lower memory speed/bandwidth.",
+      "sources": ["https://www.intel.com/content/www/us/en/products/details/discrete-gpus/arc/desktop/a-series.html", "https://game.intel.com/us/stories/intel-arc-graphics-a7series-perf-per-dollar/", "https://www.intel.com/content/www/us/en/developer/articles/technical/introduction-to-the-xe-hpg-architecture.html"], "confidence": "high"
+    },
+    {
+      "id": "intel-arc-a750", "name": "Intel Arc A750", "vendor": "Intel", "segment": "consumer", "architecture": "Xe HPG (Alchemist)", "releaseDate": "2022-10-12",
+      "vramGB": 8, "memoryType": "GDDR6", "bandwidthGBs": 512, "busWidth": 256,
+      "compute": {"fp64": null, "fp32": {"dense": 17.2, "sparse": null, "unit": "TFLOPS", "provenance": "official/Intel launch material"}, "tf32": null, "bf16": {"dense": 114.5, "sparse": null, "unit": "TFLOPS", "provenance": "derived from official Xe-HPG XMX ratio"}, "fp16": {"dense": 114.5, "sparse": null, "unit": "TFLOPS", "provenance": "derived from official Xe-HPG XMX ratio"}, "fp8": null, "fp6": null, "fp4": null, "int8": {"dense": 229, "sparse": null, "unit": "TOPS", "provenance": "official"}, "int4": {"dense": 458, "sparse": null, "unit": "TOPS", "provenance": "derived from official Xe-HPG XMX ratio"}},
+      "parallelism": {"xeCores": 28, "xmxEngines": 448, "vectorEngines": 448, "rayTracingUnits": 28}, "interconnect": "PCIe 4.0 x16", "powerW": 225,
+      "msrp": {"usd": 289, "currency": "USD", "amount": 289, "note": "launch MSRP"}, "rental": {"hourlyUSD": null, "date": "2026-09-18", "platform": null, "note": "No credible public per-card hourly market found."},
+      "nativeFormats": ["FP32", "FP16", "BF16", "INT8", "INT4", "INT2"], "notes": null,
+      "sources": ["https://www.intel.com/content/www/us/en/products/details/discrete-gpus/arc/desktop/a-series.html", "https://game.intel.com/us/stories/intel-arc-graphics-a7series-perf-per-dollar/", "https://www.intel.com/content/www/us/en/developer/articles/technical/introduction-to-the-xe-hpg-architecture.html"], "confidence": "high"
+    },
+    {
+      "id": "intel-arc-a580", "name": "Intel Arc A580", "vendor": "Intel", "segment": "consumer", "architecture": "Xe HPG (Alchemist)", "releaseDate": "2023-10-10",
+      "vramGB": 8, "memoryType": "GDDR6", "bandwidthGBs": 512, "busWidth": 256,
+      "compute": {"fp64": null, "fp32": {"dense": 14.2, "sparse": null, "unit": "TFLOPS", "provenance": "official/Intel product guide"}, "tf32": null, "bf16": {"dense": 98.5, "sparse": null, "unit": "TFLOPS", "provenance": "derived from official Xe-HPG XMX ratio"}, "fp16": {"dense": 98.5, "sparse": null, "unit": "TFLOPS", "provenance": "derived from official Xe-HPG XMX ratio"}, "fp8": null, "fp6": null, "fp4": null, "int8": {"dense": 197, "sparse": null, "unit": "TOPS", "provenance": "official"}, "int4": {"dense": 394, "sparse": null, "unit": "TOPS", "provenance": "derived from official Xe-HPG XMX ratio"}},
+      "parallelism": {"xeCores": 24, "xmxEngines": 384, "vectorEngines": 384, "rayTracingUnits": 24}, "interconnect": "PCIe 4.0 x16", "powerW": 185,
+      "msrp": {"usd": 179, "currency": "USD", "amount": 179, "note": "launch MSRP"}, "rental": {"hourlyUSD": null, "date": "2026-09-18", "platform": null, "note": "No credible public per-card hourly market found."},
+      "nativeFormats": ["FP32", "FP16", "BF16", "INT8", "INT4", "INT2"], "notes": null,
+      "sources": ["https://www.intel.com/content/www/us/en/newsroom/news/intel-arc-a580-graphics-available-worldwide.html", "https://cdrdv2-public.intel.com/792016/A580%20Product%20Guide%20v1.2.pdf", "https://www.intel.com/content/www/us/en/developer/articles/technical/introduction-to-the-xe-hpg-architecture.html"], "confidence": "high"
+    },
+    {
+      "id": "intel-arc-pro-a60", "name": "Intel Arc Pro A60", "vendor": "Intel", "segment": "professional", "architecture": "Xe HPG (Alchemist)", "releaseDate": "2023-06-06",
+      "vramGB": 12, "memoryType": "GDDR6", "bandwidthGBs": 384, "busWidth": 192,
+      "compute": {"fp64": null, "fp32": {"dense": 10.04, "sparse": null, "unit": "TFLOPS", "provenance": "official datasheet"}, "tf32": null, "bf16": {"dense": 75.5, "sparse": null, "unit": "TFLOPS", "provenance": "derived from official Xe-HPG XMX ratio"}, "fp16": {"dense": 75.5, "sparse": null, "unit": "TFLOPS", "provenance": "derived from official Xe-HPG XMX ratio"}, "fp8": null, "fp6": null, "fp4": null, "int8": {"dense": 151, "sparse": null, "unit": "TOPS", "provenance": "official"}, "int4": {"dense": 302, "sparse": null, "unit": "TOPS", "provenance": "derived from official Xe-HPG XMX ratio"}},
+      "parallelism": {"xeCores": 16, "xmxEngines": 256, "vectorEngines": 256, "rayTracingUnits": 16}, "interconnect": "PCIe 4.0 x16", "powerW": 130,
+      "msrp": {"usd": null, "currency": null, "amount": null, "note": "No official launch MSRP located."}, "rental": {"hourlyUSD": null, "date": "2026-09-18", "platform": null, "note": "No credible public per-card hourly market found."},
+      "nativeFormats": ["FP32", "FP16", "BF16", "INT8", "INT4", "INT2"], "notes": null,
+      "sources": ["https://www.intel.com/content/www/us/en/products/sku/235979/intel-arc-pro-a60-graphics/specifications.html", "https://cdrdv2-public.intel.com/779944/Datasheet-Intel%C2%AE%20Arc%E2%84%A2%20Pro%20A60%20Graphics.pdf", "https://download.intel.com/newsroom/archive/2025/es-xl-2023-06-06-intel-anuncia-las-gpus-intel-arc-pro-a60-y-pro-a60m.pdf"], "confidence": "high"
+    },
+    {
+      "id": "intel-arc-b580", "name": "Intel Arc B580", "vendor": "Intel", "segment": "consumer", "architecture": "Xe2 (Battlemage)", "releaseDate": "2024-12-13",
+      "vramGB": 12, "memoryType": "GDDR6", "bandwidthGBs": 456, "busWidth": 192,
+      "compute": {"fp64": null, "fp32": {"dense": 13.67, "sparse": null, "unit": "TFLOPS", "provenance": "official"}, "tf32": null, "bf16": {"dense": 116.5, "sparse": null, "unit": "TFLOPS", "provenance": "derived from official Xe2 XMX datatype ratio"}, "fp16": {"dense": 116.5, "sparse": null, "unit": "TFLOPS", "provenance": "derived from official Xe2 XMX datatype ratio"}, "fp8": null, "fp6": null, "fp4": null, "int8": {"dense": 233, "sparse": null, "unit": "TOPS", "provenance": "official dense XMX"}, "int4": {"dense": 466, "sparse": null, "unit": "TOPS", "provenance": "derived from official Xe2 XMX datatype ratio"}},
+      "parallelism": {"xeCores": 20, "xmxEngines": 160, "vectorEngines": 160, "rayTracingUnits": 20}, "interconnect": "PCIe 4.0 x8", "powerW": 190,
+      "msrp": {"usd": 249, "currency": "USD", "amount": 249, "note": "launch MSRP"}, "rental": {"hourlyUSD": null, "date": "2026-09-18", "platform": null, "note": "No credible public per-card hourly market found."},
+      "nativeFormats": ["FP32", "TF32", "FP16", "BF16", "INT8", "INT4", "INT2"], "notes": "Intel's Arc B media deck lists TF32 as supported, but no official peak TF32 number was found. FP8 is not listed.",
+      "sources": ["https://newsroom.intel.com/client-computing/intel-launches-arc-b-series-graphics-cards", "https://download.intel.com/newsroom/2024/client-computing/Intel-Arc-B580-B570-Media-Deck.pdf", "https://www.intel.com/content/www/us/en/support/articles/000098346/graphics.html"], "confidence": "high"
+    },
+    {
+      "id": "intel-arc-b570", "name": "Intel Arc B570", "vendor": "Intel", "segment": "consumer", "architecture": "Xe2 (Battlemage)", "releaseDate": "2025-01-16",
+      "vramGB": 10, "memoryType": "GDDR6", "bandwidthGBs": 380, "busWidth": 160,
+      "compute": {"fp64": null, "fp32": null, "tf32": null, "bf16": {"dense": 101.5, "sparse": null, "unit": "TFLOPS", "provenance": "derived from official Xe2 XMX datatype ratio"}, "fp16": {"dense": 101.5, "sparse": null, "unit": "TFLOPS", "provenance": "derived from official Xe2 XMX datatype ratio"}, "fp8": null, "fp6": null, "fp4": null, "int8": {"dense": 203, "sparse": null, "unit": "TOPS", "provenance": "official dense XMX"}, "int4": {"dense": 406, "sparse": null, "unit": "TOPS", "provenance": "derived from official Xe2 XMX datatype ratio"}},
+      "parallelism": {"xeCores": 18, "xmxEngines": 144, "vectorEngines": 144, "rayTracingUnits": 18}, "interconnect": "PCIe 4.0 x8", "powerW": 150,
+      "msrp": {"usd": 219, "currency": "USD", "amount": 219, "note": "launch MSRP"}, "rental": {"hourlyUSD": null, "date": "2026-09-18", "platform": null, "note": "No credible public per-card hourly market found."},
+      "nativeFormats": ["FP32", "TF32", "FP16", "BF16", "INT8", "INT4", "INT2"], "notes": "Intel ARK gives Q4'24 as launch quarter; 2025-01-16 is retail availability announced by Intel.",
+      "sources": ["https://www.intel.com/content/www/us/en/products/sku/241676/intel-arc-b570-graphics/specifications.html", "https://newsroom.intel.com/client-computing/intel-launches-arc-b-series-graphics-cards", "https://download.intel.com/newsroom/2024/client-computing/Intel-Arc-B580-B570-Media-Deck.pdf"], "confidence": "high"
+    },
+    {
+      "id": "intel-arc-pro-b50", "name": "Intel Arc Pro B50", "vendor": "Intel", "segment": "professional", "architecture": "Xe2 (Battlemage)", "releaseDate": "2025-Q3",
+      "vramGB": 16, "memoryType": "GDDR6 ECC", "bandwidthGBs": 224, "busWidth": 128,
+      "compute": {"fp64": null, "fp32": {"dense": 10.65, "sparse": null, "unit": "TFLOPS", "provenance": "official"}, "tf32": null, "bf16": {"dense": 85, "sparse": null, "unit": "TFLOPS", "provenance": "derived from official Xe2 XMX datatype ratio"}, "fp16": {"dense": 85, "sparse": null, "unit": "TFLOPS", "provenance": "derived from official Xe2 XMX datatype ratio"}, "fp8": null, "fp6": null, "fp4": null, "int8": {"dense": 170, "sparse": null, "unit": "TOPS", "provenance": "official dense XMX"}, "int4": {"dense": 340, "sparse": null, "unit": "TOPS", "provenance": "derived from official Xe2 XMX datatype ratio"}},
+      "parallelism": {"xeCores": 16, "xmxEngines": 128, "vectorEngines": 128, "rayTracingUnits": 16}, "interconnect": "PCIe 5.0 x8", "powerW": 70,
+      "msrp": {"usd": 299, "currency": "USD", "amount": 299, "note": "Intel suggested entry price"}, "rental": {"hourlyUSD": null, "date": "2026-09-18", "platform": null, "note": "No credible public per-card hourly market found."},
+      "nativeFormats": ["FP32", "TF32", "FP16", "BF16", "INT8", "INT4", "INT2"], "notes": "No native FP8 is listed in Intel's Arc datatype support.",
+      "sources": ["https://www.intel.com/content/www/us/en/products/sku/242615/intel-arc-pro-b50-graphics/specifications.html", "https://download.intel.com/newsroom/2025/client-computing/Intel-Arc-Pro-B-Series-Press-Deck.pdf", "https://www.intel.com/content/www/us/en/support/articles/000098346/graphics.html"], "confidence": "high"
+    },
+    {
+      "id": "intel-arc-pro-b60", "name": "Intel Arc Pro B60", "vendor": "Intel", "segment": "professional", "architecture": "Xe2 (Battlemage)", "releaseDate": "2025-Q2",
+      "vramGB": 24, "memoryType": "GDDR6", "bandwidthGBs": 456, "busWidth": 192,
+      "compute": {"fp64": null, "fp32": {"dense": 12.28, "sparse": null, "unit": "TFLOPS", "provenance": "official"}, "tf32": null, "bf16": {"dense": 98.5, "sparse": null, "unit": "TFLOPS", "provenance": "derived from official Xe2 XMX datatype ratio"}, "fp16": {"dense": 98.5, "sparse": null, "unit": "TFLOPS", "provenance": "derived from official Xe2 XMX datatype ratio"}, "fp8": null, "fp6": null, "fp4": null, "int8": {"dense": 197, "sparse": null, "unit": "TOPS", "provenance": "official dense XMX"}, "int4": {"dense": 394, "sparse": null, "unit": "TOPS", "provenance": "derived from official Xe2 XMX datatype ratio"}},
+      "parallelism": {"xeCores": 20, "xmxEngines": 160, "vectorEngines": 160, "rayTracingUnits": 20}, "interconnect": "PCIe 5.0 x8", "powerW": 200,
+      "msrp": {"usd": null, "currency": null, "amount": null, "note": "Partner-board pricing; no single reliable launch MSRP used."}, "rental": {"hourlyUSD": null, "date": "2026-09-18", "platform": null, "note": "No credible public per-card hourly market found."},
+      "nativeFormats": ["FP32", "TF32", "FP16", "BF16", "INT8", "INT4", "INT2"], "notes": "Low-power configuration supports 120–200 W; 200 W is the full reference TBP.",
+      "sources": ["https://www.intel.com/content/www/us/en/products/sku/243916/intel-arc-pro-b60-graphics/specifications.html", "https://www.intel.com/content/dam/www/central-libraries/us/en/documents/2026-03/datasheet-b60-gpu.pdf"], "confidence": "high"
+    },
+    {
+      "id": "intel-arc-pro-b65", "name": "Intel Arc Pro B65", "vendor": "Intel", "segment": "professional", "architecture": "Xe2 (Battlemage)", "releaseDate": "2026-04",
+      "vramGB": 32, "memoryType": "GDDR6", "bandwidthGBs": 608, "busWidth": 256,
+      "compute": {"fp64": null, "fp32": {"dense": 12.28, "sparse": null, "unit": "TFLOPS", "provenance": "official"}, "tf32": null, "bf16": {"dense": 98.5, "sparse": null, "unit": "TFLOPS", "provenance": "derived from official Xe2 XMX datatype ratio"}, "fp16": {"dense": 98.5, "sparse": null, "unit": "TFLOPS", "provenance": "derived from official Xe2 XMX datatype ratio"}, "fp8": null, "fp6": null, "fp4": null, "int8": {"dense": 197, "sparse": null, "unit": "TOPS", "provenance": "official dense XMX"}, "int4": {"dense": 394, "sparse": null, "unit": "TOPS", "provenance": "derived from official Xe2 XMX datatype ratio"}},
+      "parallelism": {"xeCores": 20, "xmxEngines": 160, "vectorEngines": 160, "rayTracingUnits": 20}, "interconnect": "PCIe 5.0 x16", "powerW": 200,
+      "msrp": {"usd": null, "currency": null, "amount": null, "note": "No official fixed launch MSRP located."}, "rental": {"hourlyUSD": null, "date": "2026-09-18", "platform": null, "note": "No credible public per-card hourly market found."},
+      "nativeFormats": ["FP32", "TF32", "FP16", "BF16", "INT8", "INT4", "INT2"], "notes": null,
+      "sources": ["https://www.intel.com/content/www/us/en/products/sku/245796/intel-arc-pro-b65-graphics/specifications.html", "https://newsroom.intel.com/client-computing/intel-core-ultra-series-3-with-vpro-powers-next-gen-pcs-on-18a"], "confidence": "high"
+    },
+    {
+      "id": "intel-arc-pro-b70", "name": "Intel Arc Pro B70", "vendor": "Intel", "segment": "professional", "architecture": "Xe2 (Battlemage)", "releaseDate": "2026-03-25",
+      "vramGB": 32, "memoryType": "GDDR6", "bandwidthGBs": 608, "busWidth": 256,
+      "compute": {"fp64": null, "fp32": {"dense": 22.94, "sparse": null, "unit": "TFLOPS", "provenance": "official"}, "tf32": null, "bf16": {"dense": 183.5, "sparse": null, "unit": "TFLOPS", "provenance": "derived from official Xe2 XMX datatype ratio"}, "fp16": {"dense": 183.5, "sparse": null, "unit": "TFLOPS", "provenance": "derived from official Xe2 XMX datatype ratio"}, "fp8": null, "fp6": null, "fp4": null, "int8": {"dense": 367, "sparse": null, "unit": "TOPS", "provenance": "official datasheet explicitly says dense models"}, "int4": {"dense": 734, "sparse": null, "unit": "TOPS", "provenance": "derived from official Xe2 XMX datatype ratio"}},
+      "parallelism": {"xeCores": 32, "xmxEngines": 256, "vectorEngines": 256, "rayTracingUnits": 32}, "interconnect": "PCIe 5.0 x16", "powerW": 230,
+      "msrp": {"usd": 949, "currency": "USD", "amount": 949, "note": "Intel reference card launch MSRP"}, "rental": {"hourlyUSD": null, "date": "2026-09-18", "platform": null, "note": "No credible public per-card hourly market found."},
+      "nativeFormats": ["FP32", "TF32", "FP16", "BF16", "INT8", "INT4", "INT2"], "notes": "This is a real launched product, not a rumored B70. Intel reference TBP is 230 W; partner variants can be 160–290 W.",
+      "sources": ["https://www.intel.com/content/www/us/en/products/sku/245797/intel-arc-pro-b70-graphics/specifications.html", "https://www.intel.com/content/dam/www/central-libraries/us/en/documents/2026-03/datasheet-b70-gpu.pdf", "https://newsroom.intel.com/client-computing/intel-core-ultra-series-3-with-vpro-powers-next-gen-pcs-on-18a"], "confidence": "high"
+    },
+    {
+      "id": "intel-data-center-gpu-max-1550", "name": "Intel Data Center GPU Max 1550", "vendor": "Intel", "segment": "datacenter", "architecture": "Xe HPC (Ponte Vecchio)", "releaseDate": "2022-11-09",
+      "vramGB": 128, "memoryType": "HBM2e", "bandwidthGBs": 3276.8, "busWidth": null,
+      "compute": {"fp64": {"dense": 52.4, "sparse": null, "unit": "TFLOPS", "provenance": "official Intel presentation/product material"}, "fp32": {"dense": 52.4, "sparse": null, "unit": "TFLOPS", "provenance": "official Intel presentation/product material"}, "tf32": {"dense": 419, "sparse": null, "unit": "TFLOPS", "provenance": "official Intel presentation"}, "bf16": {"dense": 839, "sparse": null, "unit": "TFLOPS", "provenance": "official Intel presentation"}, "fp16": {"dense": 839, "sparse": null, "unit": "TFLOPS", "provenance": "official Intel XMX architecture ratio; same peak as BF16"}, "fp8": null, "fp6": null, "fp4": null, "int8": {"dense": 1678, "sparse": null, "unit": "TOPS", "provenance": "official Intel presentation"}, "int4": null},
+      "parallelism": {"xeCores": 128, "vectorEnginesPerXeCore": 8, "xmxEnginesPerXeCore": 8, "tiles": 2}, "interconnect": "PCIe 5.0; 16 Xe Link ports at 53 GB/s each", "powerW": 600,
+      "msrp": {"usd": null, "currency": null, "amount": null, "note": "No public list price."}, "rental": {"hourlyUSD": null, "date": "2026-09-18", "platform": null, "note": "Intel Developer Cloud did not expose a stable public per-card hourly price found in this pass."},
+      "nativeFormats": ["FP64", "FP32", "TF32", "FP16", "BF16", "INT8"], "notes": "OAM module. No FP8 claim is made for Ponte Vecchio.",
+      "sources": ["https://www.intel.com/content/www/us/en/ark/products/series/210574/data-center-gpu.html", "https://www.intel.com/content/dam/www/central-libraries/us/en/documents/2023-01/data-center-gpu-max-series-product-brief.pdf", "https://simplecore.intel.com/oneapi-io/wp-content/uploads/sites/98/Andres-Rodriguez-AI-Software-and-Hardware-Acceleration.pdf", "https://www.intel.com/content/www/us/en/docs/oneapi/optimization-guide-gpu/2024-1/xe-arch.html"], "confidence": "high"
+    },
+    {
+      "id": "intel-data-center-gpu-max-1450", "name": "Intel Data Center GPU Max 1450", "vendor": "Intel", "segment": "datacenter", "architecture": "Xe HPC (Ponte Vecchio)", "releaseDate": "2023",
+      "vramGB": 128, "memoryType": "HBM2e", "bandwidthGBs": 3276.8, "busWidth": null,
+      "compute": {"fp64": {"dense": 52.4, "sparse": null, "unit": "TFLOPS", "provenance": "same official 128-core/600W two-stack configuration as 1550; deterministic mapping, product brief"}, "fp32": {"dense": 52.4, "sparse": null, "unit": "TFLOPS", "provenance": "derived/mapped from official identical compute configuration"}, "tf32": {"dense": 419, "sparse": null, "unit": "TFLOPS", "provenance": "derived/mapped from official identical compute configuration"}, "bf16": {"dense": 839, "sparse": null, "unit": "TFLOPS", "provenance": "derived/mapped from official identical compute configuration"}, "fp16": {"dense": 839, "sparse": null, "unit": "TFLOPS", "provenance": "derived/mapped from official identical compute configuration"}, "fp8": null, "fp6": null, "fp4": null, "int8": {"dense": 1678, "sparse": null, "unit": "TOPS", "provenance": "derived/mapped from official identical compute configuration"}, "int4": null},
+      "parallelism": {"xeCores": 128, "vectorEnginesPerXeCore": 8, "xmxEnginesPerXeCore": 8, "tiles": 2}, "interconnect": "PCIe 5.0; 16 Xe Link ports at 26.5 GB/s each", "powerW": 600,
+      "msrp": {"usd": null, "currency": null, "amount": null, "note": "No public list price."}, "rental": {"hourlyUSD": null, "date": "2026-09-18", "platform": null, "note": "No public per-card rental price located."},
+      "nativeFormats": ["FP64", "FP32", "TF32", "FP16", "BF16", "INT8"], "notes": "1450 replaced the cancelled 1350 for selected markets. Compute fields are mapped from Intel's identical core/clock-class two-stack configuration and are flagged derived.",
+      "sources": ["https://www.intel.com/content/dam/www/central-libraries/us/en/documents/2023-01/data-center-gpu-max-series-product-brief.pdf", "https://www.tomshardware.com/news/intel-axes-data-center-gpu-max-1350-preps-max-1450-for-different-markets"], "confidence": "medium"
+    },
+    {
+      "id": "intel-data-center-gpu-max-1100", "name": "Intel Data Center GPU Max 1100", "vendor": "Intel", "segment": "datacenter", "architecture": "Xe HPC (Ponte Vecchio)", "releaseDate": "2022-11-09",
+      "vramGB": 48, "memoryType": "HBM2e", "bandwidthGBs": 1228.8, "busWidth": null,
+      "compute": {"fp64": {"dense": 22.2, "sparse": null, "unit": "TFLOPS", "provenance": "published peak"}, "fp32": {"dense": 22.2, "sparse": null, "unit": "TFLOPS", "provenance": "published peak"}, "tf32": {"dense": 177.6, "sparse": null, "unit": "TFLOPS", "provenance": "derived: FP32 x8 using official Xe-HPC XMX throughput ratio"}, "bf16": {"dense": 355.2, "sparse": null, "unit": "TFLOPS", "provenance": "derived: FP32 x16 using official Xe-HPC XMX throughput ratio"}, "fp16": {"dense": 355.2, "sparse": null, "unit": "TFLOPS", "provenance": "derived: FP32 x16 using official Xe-HPC XMX throughput ratio"}, "fp8": null, "fp6": null, "fp4": null, "int8": {"dense": 710.4, "sparse": null, "unit": "TOPS", "provenance": "derived: FP32 x32 using official Xe-HPC XMX throughput ratio"}, "int4": null},
+      "parallelism": {"xeCores": 56, "vectorEnginesPerXeCore": 8, "xmxEnginesPerXeCore": 8, "tiles": 1}, "interconnect": "PCIe 5.0; 6 Xe Link ports at 53 GB/s each", "powerW": 300,
+      "msrp": {"usd": null, "currency": null, "amount": null, "note": "No public list price."}, "rental": {"hourlyUSD": null, "date": "2026-09-18", "platform": null, "note": "No public per-card rental price located."},
+      "nativeFormats": ["FP64", "FP32", "TF32", "FP16", "BF16", "INT8"], "notes": "PCIe add-in card. Matrix peaks are deterministic derivations from official Xe-HPC operation ratios and published FP32 peak, not vendor table values.",
+      "sources": ["https://www.intel.com/content/www/us/en/ark/products/series/210574/data-center-gpu.html", "https://www.intel.com/content/dam/www/central-libraries/us/en/documents/2023-01/data-center-gpu-max-series-product-brief.pdf", "https://www.intel.com/content/www/us/en/docs/oneapi/optimization-guide-gpu/2024-1/xe-arch.html"], "confidence": "medium"
+    },
+    {
+      "id": "huawei-atlas-300i-a2-32gb", "name": "Huawei Atlas 300I A2 32GB", "vendor": "Huawei", "segment": "datacenter inference", "architecture": "Ascend / Da Vinci", "releaseDate": "2025 (exact official date not located)",
+      "vramGB": 32, "memoryType": "HBM (generation not specified)", "bandwidthGBs": 800, "busWidth": null,
+      "compute": {"fp64": null, "fp32": {"dense": 75, "sparse": null, "unit": "TFLOPS", "provenance": "official product brochure"}, "tf32": null, "bf16": null, "fp16": {"dense": 280, "sparse": null, "unit": "TFLOPS", "provenance": "official"}, "fp8": null, "fp6": null, "fp4": null, "int8": {"dense": 560, "sparse": null, "unit": "TOPS", "provenance": "official"}, "int4": null},
+      "parallelism": {"embeddedCpuCores": 8, "embeddedCpuClockGHz": 2.0, "aiCores": null}, "interconnect": "PCIe 5.0", "powerW": 350,
+      "msrp": {"usd": null, "currency": null, "amount": null, "note": "No official launch list price found."}, "rental": {"hourlyUSD": null, "date": "2026-09-18", "platform": "UCACHE advertises monthly/quarterly/yearly whole-server rental", "note": "Public offer exists but price is not displayed, so no hourly conversion is made."},
+      "nativeFormats": ["FP32", "FP16", "INT8"], "notes": "Full-height full-length dual-slot PCIe inference card. Official page says 'up to'; no sparsity multiplier is stated, so values are retained as dense advertised peaks.",
+      "sources": ["https://e.huawei.com/cn/products/computing/ascend/atlas-300i-a2", "https://e.huawei.com/marketingcloud/pep/asset/20000001/Material/799a9236e96a48b7aa126b10f3d7be97/M3T1A590N1195067466974908517/%E6%98%87%E8%85%BEAtlas%20300I%20A2%20%E6%8E%A8%E7%90%86%E5%8D%A1%E4%BA%A7%E5%93%81%E5%BD%A9%E9%A1%B5.pdf", "https://ucache.cn/enterprise/new/360.html"], "confidence": "high"
+    },
+    {
+      "id": "huawei-atlas-300i-a2-64gb", "name": "Huawei Atlas 300I A2 64GB", "vendor": "Huawei", "segment": "datacenter inference", "architecture": "Ascend / Da Vinci", "releaseDate": "2025 (exact official date not located)",
+      "vramGB": 64, "memoryType": "HBM (generation not specified)", "bandwidthGBs": 1600, "busWidth": null,
+      "compute": {"fp64": null, "fp32": {"dense": 75, "sparse": null, "unit": "TFLOPS", "provenance": "official product brochure"}, "tf32": null, "bf16": null, "fp16": {"dense": 280, "sparse": null, "unit": "TFLOPS", "provenance": "official"}, "fp8": null, "fp6": null, "fp4": null, "int8": {"dense": 560, "sparse": null, "unit": "TOPS", "provenance": "official"}, "int4": null},
+      "parallelism": {"embeddedCpuCores": 8, "embeddedCpuClockGHz": 2.0, "aiCores": null}, "interconnect": "PCIe 5.0", "powerW": 350,
+      "msrp": {"usd": null, "currency": null, "amount": null, "note": "No official launch list price found."}, "rental": {"hourlyUSD": null, "date": "2026-09-18", "platform": "UCACHE advertises monthly/quarterly/yearly whole-server rental", "note": "Public offer exists but price is not displayed, so no hourly conversion is made."},
+      "nativeFormats": ["FP32", "FP16", "INT8"], "notes": "64GB variant doubles the memory bandwidth shown for the 32GB model.",
+      "sources": ["https://e.huawei.com/cn/products/computing/ascend/atlas-300i-a2", "https://e.huawei.com/marketingcloud/pep/asset/20000001/Material/799a9236e96a48b7aa126b10f3d7be97/M3T1A590N1195067466974908517/%E6%98%87%E8%85%BEAtlas%20300I%20A2%20%E6%8E%A8%E7%90%86%E5%8D%A1%E4%BA%A7%E5%93%81%E5%BD%A9%E9%A1%B5.pdf", "https://ucache.cn/enterprise/new/360.html"], "confidence": "high"
+    },
+    {
+      "id": "mthreads-mtt-s4000", "name": "MTT S4000", "vendor": "Moore Threads", "segment": "datacenter training/inference", "architecture": "MUSA 3rd generation (Quyuan)", "releaseDate": "2023-12",
+      "vramGB": 48, "memoryType": "GDDR6", "bandwidthGBs": 768, "busWidth": 384,
+      "compute": {"fp64": null, "fp32": {"dense": 25, "sparse": null, "unit": "TFLOPS", "provenance": "official product specification"}, "tf32": {"dense": 50, "sparse": null, "unit": "TFLOPS", "provenance": "official product specification"}, "bf16": {"dense": 100, "sparse": null, "unit": "TFLOPS", "provenance": "official product specification"}, "fp16": {"dense": 100, "sparse": null, "unit": "TFLOPS", "provenance": "official product specification"}, "fp8": null, "fp6": null, "fp4": null, "int8": {"dense": 200, "sparse": null, "unit": "TOPS", "provenance": "official product specification"}, "int4": null},
+      "parallelism": {"vectorCores": 8192, "tensorCores": 128}, "interconnect": "PCIe 5.0 x16; MTLink aggregate I/O 240 GB/s", "powerW": 450,
+      "msrp": {"usd": null, "currency": null, "amount": null, "note": "Enterprise quote; no official list price."}, "rental": {"hourlyUSD": null, "date": "2026-09-18", "platform": null, "note": "A compute-provider payout quote of CNY 1.49/effective occupied card-hour was found, but it is not a customer rental price and is intentionally not used."},
+      "nativeFormats": ["FP64", "FP32", "TF32", "FP16", "BF16", "INT8"], "notes": "Official current docs round matrix peaks to 50/100/200; older filing tables sometimes show 49/98/196. Current vendor specifications are used.",
+      "sources": ["https://www.mthreads.com/product/S4000", "https://docs.mthreads.com/s4000/s4000-doc-online/product_specifications/", "https://dinogen.destiny.cool/suanli"], "confidence": "high"
+    },
+    {
+      "id": "qualcomm-cloud-ai-100-ultra", "name": "Qualcomm Cloud AI 100 Ultra", "vendor": "Qualcomm", "segment": "datacenter inference", "architecture": "Cloud AI 100", "releaseDate": "2023-11-15",
+      "vramGB": 128, "memoryType": "LPDDR4x ECC", "bandwidthGBs": 548, "busWidth": null,
+      "compute": {"fp64": null, "fp32": null, "tf32": null, "bf16": null, "fp16": {"dense": 288, "sparse": null, "unit": "TFLOPS", "provenance": "official product page"}, "fp8": null, "fp6": null, "fp4": null, "int8": {"dense": 870, "sparse": null, "unit": "TOPS", "provenance": "official product page"}, "int4": null},
+      "parallelism": {"aiCores": 64, "onChipSramMB": 576}, "interconnect": "PCIe 4.0 x16", "powerW": 150,
+      "msrp": {"usd": null, "currency": null, "amount": null, "note": "No public list price."}, "rental": {"hourlyUSD": null, "date": "2026-09-18", "platform": null, "note": "No current public per-card hourly offer located."},
+      "nativeFormats": ["FP32", "FP16", "INT16", "INT8"], "notes": "Qualcomm's architecture page sometimes rounds FP16 to 290; current product page's 288 is used. No native FP8 claim.",
+      "sources": ["https://www.qualcomm.com/data-center/products/cloud-ai-100-ultra", "https://quic.github.io/cloud-ai-sdk-pages/latest/Getting-Started/Architecture/"], "confidence": "high"
+    },
+    {
+      "id": "qualcomm-cloud-ai-80-ultra", "name": "Qualcomm Cloud AI 80 Ultra", "vendor": "Qualcomm", "segment": "datacenter inference", "architecture": "Cloud AI 100", "releaseDate": "2023-11-15",
+      "vramGB": 128, "memoryType": "LPDDR4x ECC", "bandwidthGBs": 548, "busWidth": null,
+      "compute": {"fp64": null, "fp32": null, "tf32": null, "bf16": null, "fp16": {"dense": 222, "sparse": null, "unit": "TFLOPS", "provenance": "official product page"}, "fp8": null, "fp6": null, "fp4": null, "int8": {"dense": 618, "sparse": null, "unit": "TOPS", "provenance": "official product page"}, "int4": null},
+      "parallelism": {"aiCores": 32, "onChipSramMB": 288}, "interconnect": "PCIe 4.0 x16", "powerW": 150,
+      "msrp": {"usd": null, "currency": null, "amount": null, "note": "No public list price."}, "rental": {"hourlyUSD": null, "date": "2026-09-18", "platform": null, "note": "No current public per-card hourly offer located."},
+      "nativeFormats": ["FP32", "FP16", "INT16", "INT8"], "notes": null,
+      "sources": ["https://www.qualcomm.com/data-center/products/cloud-ai-100-ultra", "https://quic.github.io/cloud-ai-sdk-pages/latest/Getting-Started/Architecture/"], "confidence": "high"
+    },
+    {
+      "id": "tenstorrent-wormhole-n150", "name": "Tenstorrent Wormhole n150 (n150d/n150s)", "vendor": "Tenstorrent", "segment": "AI accelerator/developer card", "architecture": "Wormhole", "releaseDate": "2024-07-17",
+      "vramGB": 12, "memoryType": "GDDR6", "bandwidthGBs": 288, "busWidth": 192,
+      "compute": {"fp64": null, "fp32": null, "tf32": null, "bf16": {"dense": 74, "sparse": null, "unit": "TFLOPS", "provenance": "official docs; FP16/BF16 share the listed peak"}, "fp16": {"dense": 74, "sparse": null, "unit": "TFLOPS", "provenance": "official docs"}, "fp8": {"dense": 262, "sparse": null, "unit": "TFLOPS", "provenance": "official docs"}, "fp6": null, "fp4": null, "int8": {"dense": 73.8, "sparse": null, "unit": "TOPS", "provenance": "derived: 82 TOPS full 80-core ASIC x 72/80 active-core ratio; official active-core count plus Tenstorrent technical presentation"}, "int4": null},
+      "parallelism": {"activeTensixCores": 72, "clockGHz": 1.0, "onChipSramMB": 108}, "interconnect": "PCIe 4.0 x16; 2 Warp100 links and 2x QSFP-DD 200G", "powerW": 160,
+      "msrp": {"usd": 999, "currency": "USD", "amount": 999, "note": "launch developer-card price"}, "rental": {"hourlyUSD": null, "date": "2026-09-18", "platform": "Tenstorrent Cloud/Koyeb", "note": "Koyeb exposes Wormhole but shows Request Access, not a public hourly price."},
+      "nativeFormats": ["FP32 output", "TF32", "FP16", "BF16", "FP8", "BFP8", "BFP4", "BFP2", "INT32 output", "INT8", "UINT8"], "notes": "INT8 is not substituted with FP8/BFP8. It is a core-count-scaled deterministic derivation from a full-chip INT8 figure, hence medium rather than high confidence.",
+      "sources": ["https://docs.tenstorrent.com/aibs/wormhole/index.html", "https://icl.utk.edu/newsletter/presentations/2024/mohamed-bahnas-2024-03-22.pdf", "https://tenstorrent.com/newsroom/tenstorrent-wormhole-instances-are-now-available-via-koyeb-cloud", "https://www.koyeb.com/pricing"], "confidence": "medium"
+    },
+    {
+      "id": "tenstorrent-wormhole-n300", "name": "Tenstorrent Wormhole n300 (n300d/n300s)", "vendor": "Tenstorrent", "segment": "AI accelerator/developer card", "architecture": "Wormhole (dual ASIC)", "releaseDate": "2024-07-17",
+      "vramGB": 24, "memoryType": "GDDR6", "bandwidthGBs": 576, "busWidth": 384,
+      "compute": {"fp64": null, "fp32": null, "tf32": null, "bf16": {"dense": 131, "sparse": null, "unit": "TFLOPS", "provenance": "official docs; FP16/BF16 share the listed peak"}, "fp16": {"dense": 131, "sparse": null, "unit": "TFLOPS", "provenance": "official docs"}, "fp8": {"dense": 466, "sparse": null, "unit": "TFLOPS", "provenance": "official docs"}, "fp6": null, "fp4": null, "int8": {"dense": 131.2, "sparse": null, "unit": "TOPS", "provenance": "derived: 82 TOPS full 80-core ASIC x 128/80 total active-core ratio"}, "int4": null},
+      "parallelism": {"activeTensixCores": 128, "asics": 2, "clockGHz": 1.0, "onChipSramMB": 192}, "interconnect": "PCIe 4.0 x16; internal 200G link; external Warp100/QSFP-DD", "powerW": 300,
+      "msrp": {"usd": 1399, "currency": "USD", "amount": 1399, "note": "launch developer-card price"}, "rental": {"hourlyUSD": null, "date": "2026-09-18", "platform": "Koyeb", "note": "Official Koyeb pricing page lists N300s as Request Access without an hourly amount."},
+      "nativeFormats": ["FP32 output", "TF32", "FP16", "BF16", "FP8", "BFP8", "BFP4", "BFP2", "INT32 output", "INT8", "UINT8"], "notes": "Dual Wormhole ASICs. INT8 remains explicitly derived and is not inferred from the 466 FP8 number.",
+      "sources": ["https://docs.tenstorrent.com/aibs/wormhole/index.html", "https://icl.utk.edu/newsletter/presentations/2024/mohamed-bahnas-2024-03-22.pdf", "https://tenstorrent.com/newsroom/tenstorrent-wormhole-instances-are-now-available-via-koyeb-cloud", "https://www.koyeb.com/pricing"], "confidence": "medium"
+    }
+  ],
+  "candidatesEvidenceInsufficient": [
+    {"name": "Intel Gaudi 3", "vendor": "Intel", "reason": "Official whitepaper provides FP8 1678 TFLOPS, BF16 1678 TFLOPS, FP16/TF32 459 TFLOPS, 128GB HBM2e and 3.7TB/s, but does not publish a peak INT8 TOPS in the MME table. INT8 software ops are not evidence of threshold peak, so it is not admitted by the strict filter.", "source": "https://cdrdv2-public.intel.com/817486/gaudi-3-ai-accelerator-white-paper.pdf"},
+    {"name": "Moore Threads MTT S5000", "vendor": "Moore Threads", "reason": "Official material gives 80GB, 1.6TB/s, FP8-through-FP64 support and roughly 1000 TFLOPS dense AI compute, but the precision of that peak and a distinct dense INT8 figure are not publicly pinned down.", "source": "https://www.mthreads.com/product/S5000"},
+    {"name": "Tenstorrent Blackhole p100a/p150a/p150b", "vendor": "Tenstorrent", "reason": "Official docs give 28/32GB, 448/512GB/s, 120 Tensix cores, BFP8 664 TFLOPS and native INT8, but no official dense INT8 peak. BFP8 is not used as INT8.", "source": "https://docs.tenstorrent.com/aibs/blackhole/installation.html"},
+    {"name": "Enflame S60", "vendor": "Enflame", "reason": "A 2024 independent accelerator card is identifiable, but detailed public numbers are mostly secondary and conflict; vendor/filing pages do not expose a sufficient exact dense INT8+memory spec set.", "source": "https://static.sse.com.cn/stock/disclosure/announcement/c/202604/002175_20260416_BH8W.pdf"},
+    {"name": "Cambricon MLU590", "vendor": "Cambricon", "reason": "Public sources conflict on memory capacity, bandwidth and INT8 peak; no stable official product table was found.", "source": "https://www.cambricon.com/"},
+    {"name": "MetaX C500/C550", "vendor": "MetaX", "reason": "Official filing confirms card identity, 64GB HBM2e, launch timing and interconnect, but exact compute/bandwidth figures available publicly are largely secondary. Keep out of the strict high-confidence set.", "source": "https://static.sse.com.cn/stock/disclosure/announcement/c/202510/002078_20251024_OAW7.pdf"},
+    {"name": "Biren BR106B / BR166", "vendor": "Biren", "reason": "Official product pages identify newer cards but do not expose sufficient exact memory, bandwidth and dense INT8 data for the filter.", "source": "https://www.birentech.com/product/hardware/106b/"},
+    {"name": "Iluvatar CoreX Tiangai 150", "vendor": "Iluvatar CoreX", "reason": "Vendor page exposes 64GB HBM and 350W only. A government procurement requirement names >=660 INT8, >=220 FP16 and >=1100GB/s for a BI-V150-64-01, but these are lower-bound tender requirements, not exact vendor peaks.", "source": "https://www.plap.mil.cn/freecms/site/juncai/ggxx/info/2025/8a1d03a39afc00c5019b06c930335338.html"},
+    {"name": "Huawei Ascend 910B/910C", "vendor": "Huawei", "reason": "Chip/platform names are well known, but no official standalone add-in-card product page with a complete, unambiguous per-card peak/memory/bandwidth table was found. Atlas 300I A2 is included instead because it is a defined PCIe card."}
+  ],
+  "excluded": [
+    {"name": "Intel Data Center GPU Flex 140/170", "reason": "Introduced August 2022, before the 2022-09-18 release-window cutoff."},
+    {"name": "Intel Gaudi 2", "reason": "Launched May 2022, before the cutoff; official peak INT8 is also not published in the cited fact sheet."},
+    {"name": "Intel Data Center GPU Max 1350", "reason": "Cancelled; not a launched product."},
+    {"name": "Intel Arc mobile / Arc Pro A60M", "reason": "Laptop/mobile implementations, not standalone add-in cards for this database scope."},
+    {"name": "Moore Threads MTT S80", "reason": "Official/filing dense INT8 is about 59 TOPS, below 66.06."},
+    {"name": "Moore Threads MTT X300", "reason": "Dense INT8 about 59 TOPS, below threshold."},
+    {"name": "Moore Threads MTT S3000", "reason": "Dense INT8 about 62 TOPS, below threshold."},
+    {"name": "Biren BR100/BR104", "reason": "Unveiled August 2022, before the cutoff."},
+    {"name": "Cambricon MLU370-X8", "reason": "Launched March 2022, before the cutoff."},
+    {"name": "Iluvatar Tiangai 100", "reason": "Launched before the cutoff."},
+    {"name": "Qualcomm Cloud AI 100 / Pro (original generation)", "reason": "Commercial generation predates the cutoff; Ultra variants are included."},
+    {"name": "GroqCard", "reason": "On-card SRAM is far below 8GB."},
+    {"name": "Graphcore Bow/IPU cards", "reason": "Per-card on-chip memory is below 8GB."},
+    {"name": "Google TPU, AWS Inferentia/Trainium", "reason": "Cloud-integrated modules/instances without a generally identifiable standalone accelerator-card SKU and public per-card table; held outside this add-in-card scope."}
+  ]
+}

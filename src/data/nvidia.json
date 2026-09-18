@@ -1,0 +1,434 @@
+{
+  "schemaVersion": "1.0",
+  "asOf": "2026-09-18",
+  "filter": {
+    "releaseWindow": ["2022-09-18", "2026-09-18"],
+    "minimumUsableVramGB": 8,
+    "minimumDenseInt8TOPS": 66.06,
+    "baseline": "GeForce RTX 4090 dense INT8 = 660.6 TOPS"
+  },
+  "units": {"bandwidthGBs": "GB/s", "compute": "TFLOPS/TOPS", "power": "W", "rentalHourlyUSD": "USD/GPU-hour"},
+  "method": "Official vendor values are preferred. A slash in NVIDIA material is dense/sparse unless the footnote says otherwise. status=derived means arithmetic from an official peak using an architecture-documented ratio; it is not a benchmark.",
+  "rentalPricing": {"priceDate": "2026-09-18", "statistic": "simple unweighted arithmetic mean of the listed public per-GPU hourly samples", "caveat": "not volume-weighted; community, secure, and on-demand tiers are labeled in rentalSamples; spot and reserved are excluded unless explicitly stated"},
+  "gpus": [
+    {
+      "name": "GeForce RTX 4060", "vendor": "NVIDIA", "segment": "consumer", "architecture": "Ada Lovelace", "releaseDate": "2023-06-29",
+      "vramGB": 8, "memoryType": "GDDR6", "bandwidthGBs": 272, "busWidth": 128,
+      "fp64": 0.236, "fp32": 15.1, "tf32Dense": 15.13, "tf32Sparse": 30.25, "bf16Dense": 30.25, "bf16Sparse": 60.5, "fp16Dense": {"value": 60.5, "accumulate": "FP16", "fp32Accumulate": 30.25}, "fp16Sparse": {"value": 121, "accumulate": "FP16", "fp32Accumulate": 60.5}, "fp8Dense": 121, "fp8Sparse": 242, "fp6": null, "fp4": null, "int8Dense": 121, "int8Sparse": 242, "int4": {"dense": 242, "sparse": 484},
+      "computeUnitsSM": 24, "shaderCUDA": 3072, "matrixTensorCores": 96, "rtCores": 24, "interconnect": "PCIe 4.0 x8; no NVLink", "tdpTbp": 115,
+      "msrp": {"amount": 299, "currency": "USD", "date": "2023-05-18"}, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8 E4M3/E5M2", "INT8", "INT4"],
+      "notes": "Tensor figures derived from official 242 sparse AI TOPS; dense is half. FP16 shown with FP16 accumulation; FP32 accumulation is half.",
+      "sources": ["https://www.nvidia.com/en-gb/geforce/graphics-cards/40-series/rtx-4060-4060ti/", "https://nvidianews.nvidia.com/news/geforce-rtx-4060-family-is-here-nvidias-revolutionary-ada-lovelace-architecture-comes-to-core-gamers-everywhere-starting-at-299", "https://images.nvidia.com/aem-dam/Solutions/geforce/ada/nvidia-ada-gpu-architecture.pdf"], "confidence": "high", "status": "derived"
+    },
+    {
+      "name": "GeForce RTX 4060 Ti 8GB", "vendor": "NVIDIA", "segment": "consumer", "architecture": "Ada Lovelace", "releaseDate": "2023-05-24",
+      "vramGB": 8, "memoryType": "GDDR6", "bandwidthGBs": 288, "busWidth": 128,
+      "fp64": 0.345, "fp32": 22.1, "tf32Dense": 22.06, "tf32Sparse": 44.13, "bf16Dense": 44.13, "bf16Sparse": 88.25, "fp16Dense": {"value": 88.25, "accumulate": "FP16", "fp32Accumulate": 44.13}, "fp16Sparse": {"value": 176.5, "accumulate": "FP16", "fp32Accumulate": 88.25}, "fp8Dense": 176.5, "fp8Sparse": 353, "fp6": null, "fp4": null, "int8Dense": 176.5, "int8Sparse": 353, "int4": {"dense": 353, "sparse": 706},
+      "computeUnitsSM": 34, "shaderCUDA": 4352, "matrixTensorCores": 136, "rtCores": 34, "interconnect": "PCIe 4.0 x8; no NVLink", "tdpTbp": 160,
+      "msrp": {"amount": 399, "currency": "USD", "date": "2023-05-18"}, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8 E4M3/E5M2", "INT8", "INT4"], "notes": "Tensor peaks derived from official 353 sparse AI TOPS.",
+      "sources": ["https://www.nvidia.com/en-gb/geforce/graphics-cards/40-series/rtx-4060-4060ti/", "https://nvidianews.nvidia.com/news/geforce-rtx-4060-family-is-here-nvidias-revolutionary-ada-lovelace-architecture-comes-to-core-gamers-everywhere-starting-at-299"], "confidence": "high", "status": "derived"
+    },
+    {
+      "name": "GeForce RTX 4060 Ti 16GB", "vendor": "NVIDIA", "segment": "consumer", "architecture": "Ada Lovelace", "releaseDate": "2023-07-18",
+      "vramGB": 16, "memoryType": "GDDR6", "bandwidthGBs": 288, "busWidth": 128,
+      "fp64": 0.345, "fp32": 22.1, "tf32Dense": 22.06, "tf32Sparse": 44.13, "bf16Dense": 44.13, "bf16Sparse": 88.25, "fp16Dense": {"value": 88.25, "accumulate": "FP16", "fp32Accumulate": 44.13}, "fp16Sparse": {"value": 176.5, "accumulate": "FP16", "fp32Accumulate": 88.25}, "fp8Dense": 176.5, "fp8Sparse": 353, "fp6": null, "fp4": null, "int8Dense": 176.5, "int8Sparse": 353, "int4": {"dense": 353, "sparse": 706},
+      "computeUnitsSM": 34, "shaderCUDA": 4352, "matrixTensorCores": 136, "rtCores": 34, "interconnect": "PCIe 4.0 x8; no NVLink", "tdpTbp": 165,
+      "msrp": {"amount": 499, "currency": "USD", "date": "2023-05-18"}, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8 E4M3/E5M2", "INT8", "INT4"], "notes": "Same GPU as 8GB variant; tensor peaks derived from official 353 sparse AI TOPS.",
+      "sources": ["https://www.nvidia.com/en-gb/geforce/graphics-cards/40-series/rtx-4060-4060ti/", "https://nvidianews.nvidia.com/news/geforce-rtx-4060-family-is-here-nvidias-revolutionary-ada-lovelace-architecture-comes-to-core-gamers-everywhere-starting-at-299"], "confidence": "high", "status": "derived"
+    },
+    {
+      "name": "GeForce RTX 4070", "vendor": "NVIDIA", "segment": "consumer", "architecture": "Ada Lovelace", "releaseDate": "2023-04-13",
+      "vramGB": 12, "memoryType": "GDDR6X/GDDR6", "bandwidthGBs": 504, "busWidth": 192,
+      "fp64": 0.455, "fp32": 29.1, "tf32Dense": 29.13, "tf32Sparse": 58.25, "bf16Dense": 58.25, "bf16Sparse": 116.5, "fp16Dense": {"value": 116.5, "accumulate": "FP16", "fp32Accumulate": 58.25}, "fp16Sparse": {"value": 233, "accumulate": "FP16", "fp32Accumulate": 116.5}, "fp8Dense": 233, "fp8Sparse": 466, "fp6": null, "fp4": null, "int8Dense": 233, "int8Sparse": 466, "int4": {"dense": 466, "sparse": 932},
+      "computeUnitsSM": 46, "shaderCUDA": 5888, "matrixTensorCores": 184, "rtCores": 46, "interconnect": "PCIe 4.0 x16; no NVLink", "tdpTbp": 200,
+      "msrp": {"amount": 599, "currency": "USD", "date": "2023-04-12"}, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8 E4M3/E5M2", "INT8", "INT4"], "notes": "Tensor peaks derived from official 466 sparse AI TOPS.",
+      "sources": ["https://www.nvidia.com/en-au/geforce/graphics-cards/40-series/rtx-4070-family/", "https://nvidianews.nvidia.com/_gallery/download_pdf/6436abfced6ae51ecfb0f60a/"], "confidence": "high", "status": "derived"
+    },
+    {
+      "name": "GeForce RTX 4070 SUPER", "vendor": "NVIDIA", "segment": "consumer", "architecture": "Ada Lovelace", "releaseDate": "2024-01-17",
+      "vramGB": 12, "memoryType": "GDDR6X", "bandwidthGBs": 504, "busWidth": 192,
+      "fp64": 0.558, "fp32": 35.5, "tf32Dense": 35.5, "tf32Sparse": 71, "bf16Dense": 71, "bf16Sparse": 142, "fp16Dense": {"value": 142, "accumulate": "FP16", "fp32Accumulate": 71}, "fp16Sparse": {"value": 284, "accumulate": "FP16", "fp32Accumulate": 142}, "fp8Dense": 284, "fp8Sparse": 568, "fp6": null, "fp4": null, "int8Dense": 284, "int8Sparse": 568, "int4": {"dense": 568, "sparse": 1136},
+      "computeUnitsSM": 56, "shaderCUDA": 7168, "matrixTensorCores": 224, "rtCores": 56, "interconnect": "PCIe 4.0 x16; no NVLink", "tdpTbp": 220,
+      "msrp": {"amount": 599, "currency": "USD", "date": "2024-01-08"}, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8 E4M3/E5M2", "INT8", "INT4"], "notes": "Tensor peaks derived from official 568 sparse AI TOPS.",
+      "sources": ["https://www.nvidia.com/en-au/geforce/graphics-cards/40-series/rtx-4070-family/", "https://nvidianews.nvidia.com/news/geforce-rtx-40-super-series"], "confidence": "high", "status": "derived"
+    },
+    {
+      "name": "GeForce RTX 4070 Ti", "vendor": "NVIDIA", "segment": "consumer", "architecture": "Ada Lovelace", "releaseDate": "2023-01-05",
+      "vramGB": 12, "memoryType": "GDDR6X", "bandwidthGBs": 504, "busWidth": 192,
+      "fp64": 0.626, "fp32": 40.1, "tf32Dense": 40.1, "tf32Sparse": 80.2, "bf16Dense": 80.2, "bf16Sparse": 160.4, "fp16Dense": {"value": 160.4, "accumulate": "FP16", "fp32Accumulate": 80.2}, "fp16Sparse": {"value": 320.8, "accumulate": "FP16", "fp32Accumulate": 160.4}, "fp8Dense": 320.7, "fp8Sparse": 641.4, "fp6": null, "fp4": null, "int8Dense": 320.7, "int8Sparse": 641.4, "int4": {"dense": 641.4, "sparse": 1282.8},
+      "computeUnitsSM": 60, "shaderCUDA": 7680, "matrixTensorCores": 240, "rtCores": 60, "interconnect": "PCIe 4.0 x16; no NVLink", "tdpTbp": 285,
+      "msrp": {"amount": 799, "currency": "USD", "date": "2023-01-03"}, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8 E4M3/E5M2", "INT8", "INT4"], "notes": "Exact dense/sparse tensor figures appear in NVIDIA RTX Blackwell whitepaper comparison appendix.",
+      "sources": ["https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf"], "confidence": "high", "status": "official"
+    },
+    {
+      "name": "GeForce RTX 4070 Ti SUPER", "vendor": "NVIDIA", "segment": "consumer", "architecture": "Ada Lovelace", "releaseDate": "2024-01-24",
+      "vramGB": 16, "memoryType": "GDDR6X", "bandwidthGBs": 672, "busWidth": 256,
+      "fp64": 0.689, "fp32": 44.1, "tf32Dense": 44.13, "tf32Sparse": 88.25, "bf16Dense": 88.25, "bf16Sparse": 176.5, "fp16Dense": {"value": 176.5, "accumulate": "FP16", "fp32Accumulate": 88.25}, "fp16Sparse": {"value": 353, "accumulate": "FP16", "fp32Accumulate": 176.5}, "fp8Dense": 353, "fp8Sparse": 706, "fp6": null, "fp4": null, "int8Dense": 353, "int8Sparse": 706, "int4": {"dense": 706, "sparse": 1412},
+      "computeUnitsSM": 66, "shaderCUDA": 8448, "matrixTensorCores": 264, "rtCores": 66, "interconnect": "PCIe 4.0 x16; no NVLink", "tdpTbp": 285,
+      "msrp": {"amount": 799, "currency": "USD", "date": "2024-01-08"}, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8 E4M3/E5M2", "INT8", "INT4"], "notes": "Tensor peaks derived from official 706 sparse AI TOPS.",
+      "sources": ["https://www.nvidia.com/en-au/geforce/graphics-cards/40-series/rtx-4070-family/", "https://nvidianews.nvidia.com/news/geforce-rtx-40-super-series"], "confidence": "high", "status": "derived"
+    },
+    {
+      "name": "GeForce RTX 4080", "vendor": "NVIDIA", "segment": "consumer", "architecture": "Ada Lovelace", "releaseDate": "2022-11-16",
+      "vramGB": 16, "memoryType": "GDDR6X", "bandwidthGBs": 716.8, "busWidth": 256,
+      "fp64": 0.761, "fp32": 48.7, "tf32Dense": 48.7, "tf32Sparse": 97.4, "bf16Dense": 97.5, "bf16Sparse": 194.9, "fp16Dense": {"value": 194.9, "accumulate": "FP16", "fp32Accumulate": 97.5}, "fp16Sparse": {"value": 389.8, "accumulate": "FP16", "fp32Accumulate": 194.9}, "fp8Dense": 389.9, "fp8Sparse": 779.8, "fp6": null, "fp4": null, "int8Dense": 389.9, "int8Sparse": 779.8, "int4": {"dense": 779.8, "sparse": 1559.6},
+      "computeUnitsSM": 76, "shaderCUDA": 9728, "matrixTensorCores": 304, "rtCores": 76, "interconnect": "PCIe 4.0 x16; no NVLink", "tdpTbp": 320,
+      "msrp": {"amount": 1199, "currency": "USD", "date": "2022-09-20"}, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8 E4M3/E5M2", "INT8", "INT4"], "notes": "Exact dense/sparse tensor figures in NVIDIA Blackwell architecture comparison appendix.",
+      "sources": ["https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf", "https://nvidianews.nvidia.com/news/nvidia-delivers-quantum-leap-in-performance-introduces-new-era-of-neural-rendering-with-geforce-rtx-40-series"], "confidence": "high", "status": "official"
+    },
+    {
+      "name": "GeForce RTX 4080 SUPER", "vendor": "NVIDIA", "segment": "consumer", "architecture": "Ada Lovelace", "releaseDate": "2024-01-31",
+      "vramGB": 16, "memoryType": "GDDR6X", "bandwidthGBs": 736, "busWidth": 256,
+      "fp64": 0.816, "fp32": 52.2, "tf32Dense": 52.25, "tf32Sparse": 104.5, "bf16Dense": 104.5, "bf16Sparse": 209, "fp16Dense": {"value": 209, "accumulate": "FP16", "fp32Accumulate": 104.5}, "fp16Sparse": {"value": 418, "accumulate": "FP16", "fp32Accumulate": 209}, "fp8Dense": 418, "fp8Sparse": 836, "fp6": null, "fp4": null, "int8Dense": 418, "int8Sparse": 836, "int4": {"dense": 836, "sparse": 1672},
+      "computeUnitsSM": 80, "shaderCUDA": 10240, "matrixTensorCores": 320, "rtCores": 80, "interconnect": "PCIe 4.0 x16; no NVLink", "tdpTbp": 320,
+      "msrp": {"amount": 999, "currency": "USD", "date": "2024-01-08"}, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8 E4M3/E5M2", "INT8", "INT4"], "notes": "Tensor peaks derived from official 836 sparse AI TOPS.",
+      "sources": ["https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4080-family/", "https://nvidianews.nvidia.com/news/geforce-rtx-40-super-series"], "confidence": "high", "status": "derived"
+    },
+    {
+      "name": "GeForce RTX 4090", "vendor": "NVIDIA", "segment": "consumer", "architecture": "Ada Lovelace", "releaseDate": "2022-10-12",
+      "vramGB": 24, "memoryType": "GDDR6X", "bandwidthGBs": 1008, "busWidth": 384,
+      "fp64": 1.29, "fp32": 82.6, "tf32Dense": 82.6, "tf32Sparse": 165.2, "bf16Dense": 165.2, "bf16Sparse": 330.4, "fp16Dense": {"value": 330.3, "accumulate": "FP16", "fp32Accumulate": 165.2}, "fp16Sparse": {"value": 660.6, "accumulate": "FP16", "fp32Accumulate": 330.4}, "fp8Dense": {"value": 660.6, "accumulate": "FP16", "fp32Accumulate": 330.3}, "fp8Sparse": {"value": 1321.2, "accumulate": "FP16", "fp32Accumulate": 660.6}, "fp6": null, "fp4": null, "int8Dense": 660.6, "int8Sparse": 1321.2, "int4": {"dense": 1321.2, "sparse": 2642.4},
+      "computeUnitsSM": 128, "shaderCUDA": 16384, "matrixTensorCores": 512, "rtCores": 128, "interconnect": "PCIe 4.0 x16; no NVLink", "tdpTbp": 450,
+      "msrp": {"amount": 1599, "currency": "USD", "date": "2022-09-20"}, "rentalHourlyUSD": 0.55,
+      "rentalSamples": [{"platform": "RunPod Secure", "price": 0.74}, {"platform": "RunPod Community", "price": 0.34}, {"platform": "Spheron", "price": 0.72}, {"platform": "CloudRift", "price": 0.39}],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8 E4M3/E5M2", "INT8", "INT4"], "notes": "Rental mean is simple unweighted mean of four public on-demand/community samples, 2026-08/09; not capacity-weighted.",
+      "sources": ["https://images.nvidia.com/aem-dam/Solutions/geforce/ada/nvidia-ada-gpu-architecture.pdf", "https://nvidianews.nvidia.com/news/nvidia-delivers-quantum-leap-in-performance-introduces-new-era-of-neural-rendering-with-geforce-rtx-40-series", "https://www.runpod.io/articles/guides/ai-server-cost", "https://www.runpod.io/articles/comparison/runpod-vs-cloudrift", "https://www.runpod.io/articles/comparison/runpod-vs-spheron"], "confidence": "high", "status": "official"
+    },
+    {
+      "name": "GeForce RTX 5050", "vendor": "NVIDIA", "segment": "consumer", "architecture": "Blackwell", "releaseDate": "2025-07-15",
+      "vramGB": 8, "memoryType": "GDDR6", "bandwidthGBs": 320, "busWidth": 128,
+      "fp64": null, "fp32": 13.2, "tf32Dense": 13.16, "tf32Sparse": 26.31, "bf16Dense": 26.31, "bf16Sparse": 52.63, "fp16Dense": {"value": 52.63, "accumulate": "FP16", "fp32Accumulate": 26.31}, "fp16Sparse": {"value": 105.25, "accumulate": "FP16", "fp32Accumulate": 52.63}, "fp8Dense": 105.25, "fp8Sparse": 210.5, "fp6": {"dense": 105.25, "sparse": 210.5}, "fp4": {"dense": 210.5, "sparse": 421}, "int8Dense": 105.25, "int8Sparse": 210.5, "int4": null,
+      "computeUnitsSM": 20, "shaderCUDA": 2560, "matrixTensorCores": 80, "rtCores": 20, "interconnect": "PCIe 5.0 x8; no NVLink", "tdpTbp": 130,
+      "msrp": {"amount": 249, "currency": "USD", "date": "2025-06-24"}, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8", "FP6", "FP4", "INT8"], "notes": "Official 421 AI TOPS is FP4 sparse. FP8/INT8 dense derived as AI TOPS/4; FP16 dense with FP16 accumulation derived as AI TOPS/4 under RTX Blackwell ratios.",
+      "sources": ["https://www.nvidia.com/en-au/geforce/graphics-cards/50-series/rtx-5050/", "https://www.nvidia.com/en-ph/geforce/news/rtx-5050-desktop-gpu-and-laptops/", "https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf"], "confidence": "medium-high", "status": "derived"
+    },
+    {
+      "name": "GeForce RTX 5060", "vendor": "NVIDIA", "segment": "consumer", "architecture": "Blackwell", "releaseDate": "2025-05-19",
+      "vramGB": 8, "memoryType": "GDDR7", "bandwidthGBs": 448, "busWidth": 128,
+      "fp64": null, "fp32": 19.2, "tf32Dense": 19.19, "tf32Sparse": 38.38, "bf16Dense": 38.38, "bf16Sparse": 76.75, "fp16Dense": {"value": 76.75, "accumulate": "FP16", "fp32Accumulate": 38.38}, "fp16Sparse": {"value": 153.5, "accumulate": "FP16", "fp32Accumulate": 76.75}, "fp8Dense": 153.5, "fp8Sparse": 307, "fp6": {"dense": 153.5, "sparse": 307}, "fp4": {"dense": 307, "sparse": 614}, "int8Dense": 153.5, "int8Sparse": 307, "int4": null,
+      "computeUnitsSM": 30, "shaderCUDA": 3840, "matrixTensorCores": 120, "rtCores": 30, "interconnect": "PCIe 5.0 x8; no NVLink", "tdpTbp": 145,
+      "msrp": {"amount": 299, "currency": "USD", "date": "2025-04-15"}, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8", "FP6", "FP4", "INT8"], "notes": "Official 614 AI TOPS is FP4 sparse; other tensor peaks derived from Blackwell ratios.",
+      "sources": ["https://www.nvidia.com/en-gb/geforce/graphics-cards/compare/?section=compare-specs", "https://nvidianews.nvidia.com/news/nvidia-blackwell-geforce-rtx-arrives-for-every-gamer-starting-at-299"], "confidence": "medium-high", "status": "derived"
+    },
+    {
+      "name": "GeForce RTX 5060 Ti 8GB", "vendor": "NVIDIA", "segment": "consumer", "architecture": "Blackwell", "releaseDate": "2025-04-16",
+      "vramGB": 8, "memoryType": "GDDR7", "bandwidthGBs": 448, "busWidth": 128,
+      "fp64": null, "fp32": 23.7, "tf32Dense": 23.72, "tf32Sparse": 47.44, "bf16Dense": 47.44, "bf16Sparse": 94.88, "fp16Dense": {"value": 94.88, "accumulate": "FP16", "fp32Accumulate": 47.44}, "fp16Sparse": {"value": 189.75, "accumulate": "FP16", "fp32Accumulate": 94.88}, "fp8Dense": 189.75, "fp8Sparse": 379.5, "fp6": {"dense": 189.75, "sparse": 379.5}, "fp4": {"dense": 379.5, "sparse": 759}, "int8Dense": 189.75, "int8Sparse": 379.5, "int4": null,
+      "computeUnitsSM": 36, "shaderCUDA": 4608, "matrixTensorCores": 144, "rtCores": 36, "interconnect": "PCIe 5.0 x8; no NVLink", "tdpTbp": 180,
+      "msrp": {"amount": 379, "currency": "USD", "date": "2025-04-15"}, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8", "FP6", "FP4", "INT8"], "notes": "Official 759 AI TOPS is FP4 sparse; other tensor peaks derived.",
+      "sources": ["https://www.nvidia.com/en-gb/geforce/graphics-cards/compare/?section=compare-specs", "https://nvidianews.nvidia.com/news/nvidia-blackwell-geforce-rtx-arrives-for-every-gamer-starting-at-299"], "confidence": "medium-high", "status": "derived"
+    },
+    {
+      "name": "GeForce RTX 5060 Ti 16GB", "vendor": "NVIDIA", "segment": "consumer", "architecture": "Blackwell", "releaseDate": "2025-04-16",
+      "vramGB": 16, "memoryType": "GDDR7", "bandwidthGBs": 448, "busWidth": 128,
+      "fp64": null, "fp32": 23.7, "tf32Dense": 23.72, "tf32Sparse": 47.44, "bf16Dense": 47.44, "bf16Sparse": 94.88, "fp16Dense": {"value": 94.88, "accumulate": "FP16", "fp32Accumulate": 47.44}, "fp16Sparse": {"value": 189.75, "accumulate": "FP16", "fp32Accumulate": 94.88}, "fp8Dense": 189.75, "fp8Sparse": 379.5, "fp6": {"dense": 189.75, "sparse": 379.5}, "fp4": {"dense": 379.5, "sparse": 759}, "int8Dense": 189.75, "int8Sparse": 379.5, "int4": null,
+      "computeUnitsSM": 36, "shaderCUDA": 4608, "matrixTensorCores": 144, "rtCores": 36, "interconnect": "PCIe 5.0 x8; no NVLink", "tdpTbp": 180,
+      "msrp": {"amount": 429, "currency": "USD", "date": "2025-04-15"}, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8", "FP6", "FP4", "INT8"], "notes": "Same compute as 8GB variant; official 759 AI TOPS is FP4 sparse.",
+      "sources": ["https://www.nvidia.com/en-gb/geforce/graphics-cards/compare/?section=compare-specs", "https://nvidianews.nvidia.com/news/nvidia-blackwell-geforce-rtx-arrives-for-every-gamer-starting-at-299"], "confidence": "medium-high", "status": "derived"
+    },
+    {
+      "name": "GeForce RTX 5070", "vendor": "NVIDIA", "segment": "consumer", "architecture": "Blackwell", "releaseDate": "2025-03-05",
+      "vramGB": 12, "memoryType": "GDDR7", "bandwidthGBs": 672, "busWidth": 192,
+      "fp64": null, "fp32": 30.9, "tf32Dense": 30.9, "tf32Sparse": 61.7, "bf16Dense": 61.7, "bf16Sparse": 123.5, "fp16Dense": {"value": 123.5, "accumulate": "FP16", "fp32Accumulate": 61.7}, "fp16Sparse": {"value": 246.9, "accumulate": "FP16", "fp32Accumulate": 123.5}, "fp8Dense": {"value": 246.9, "accumulate": "FP16", "fp32Accumulate": 123.5}, "fp8Sparse": {"value": 493.9, "accumulate": "FP16", "fp32Accumulate": 246.9}, "fp6": {"dense": 246.9, "sparse": 493.9}, "fp4": {"dense": 493.9, "sparse": 987.8}, "int8Dense": 246.9, "int8Sparse": 493.9, "int4": null,
+      "computeUnitsSM": 48, "shaderCUDA": 6144, "matrixTensorCores": 192, "rtCores": 48, "interconnect": "PCIe 5.0 x16; no NVLink", "tdpTbp": 250,
+      "msrp": {"amount": 549, "currency": "USD", "date": "2025-01-06"}, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8", "FP6", "FP4", "INT8"], "notes": "Exact values from NVIDIA RTX Blackwell whitepaper.",
+      "sources": ["https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf", "https://nvidianews.nvidia.com/news/nvidia-blackwell-geforce-rtx-50-series-opens-new-world-of-ai-computer-graphics"], "confidence": "high", "status": "official"
+    },
+    {
+      "name": "GeForce RTX 5070 Ti", "vendor": "NVIDIA", "segment": "consumer", "architecture": "Blackwell", "releaseDate": "2025-02-20",
+      "vramGB": 16, "memoryType": "GDDR7", "bandwidthGBs": 896, "busWidth": 256,
+      "fp64": null, "fp32": 43.9, "tf32Dense": 43.9, "tf32Sparse": 87.9, "bf16Dense": 87.9, "bf16Sparse": 175.8, "fp16Dense": {"value": 175.8, "accumulate": "FP16", "fp32Accumulate": 87.9}, "fp16Sparse": {"value": 351.5, "accumulate": "FP16", "fp32Accumulate": 175.8}, "fp8Dense": {"value": 351.5, "accumulate": "FP16", "fp32Accumulate": 175.8}, "fp8Sparse": {"value": 703, "accumulate": "FP16", "fp32Accumulate": 351.5}, "fp6": {"dense": 351.5, "sparse": 703}, "fp4": {"dense": 703, "sparse": 1406}, "int8Dense": 351.5, "int8Sparse": 703, "int4": null,
+      "computeUnitsSM": 70, "shaderCUDA": 8960, "matrixTensorCores": 280, "rtCores": 70, "interconnect": "PCIe 5.0 x16; no NVLink", "tdpTbp": 300,
+      "msrp": {"amount": 749, "currency": "USD", "date": "2025-01-06"}, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8", "FP6", "FP4", "INT8"], "notes": "Exact values from NVIDIA RTX Blackwell whitepaper.",
+      "sources": ["https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf", "https://nvidianews.nvidia.com/news/nvidia-blackwell-geforce-rtx-50-series-opens-new-world-of-ai-computer-graphics"], "confidence": "high", "status": "official"
+    },
+    {
+      "name": "GeForce RTX 5080", "vendor": "NVIDIA", "segment": "consumer", "architecture": "Blackwell", "releaseDate": "2025-01-30",
+      "vramGB": 16, "memoryType": "GDDR7", "bandwidthGBs": 960, "busWidth": 256,
+      "fp64": null, "fp32": 56.3, "tf32Dense": 56.3, "tf32Sparse": 112.6, "bf16Dense": 112.6, "bf16Sparse": 225.1, "fp16Dense": {"value": 225.1, "accumulate": "FP16", "fp32Accumulate": 112.6}, "fp16Sparse": {"value": 450.2, "accumulate": "FP16", "fp32Accumulate": 225.1}, "fp8Dense": {"value": 450.2, "accumulate": "FP16", "fp32Accumulate": 225.1}, "fp8Sparse": {"value": 900.4, "accumulate": "FP16", "fp32Accumulate": 450.2}, "fp6": {"dense": 450.2, "sparse": 900.4}, "fp4": {"dense": 900.4, "sparse": 1801}, "int8Dense": 450.2, "int8Sparse": 900.4, "int4": null,
+      "computeUnitsSM": 84, "shaderCUDA": 10752, "matrixTensorCores": 336, "rtCores": 84, "interconnect": "PCIe 5.0 x16; no NVLink", "tdpTbp": 360,
+      "msrp": {"amount": 999, "currency": "USD", "date": "2025-01-06"}, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8", "FP6", "FP4", "INT8"], "notes": "Exact values from NVIDIA RTX Blackwell whitepaper.",
+      "sources": ["https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf", "https://nvidianews.nvidia.com/news/nvidia-blackwell-geforce-rtx-50-series-opens-new-world-of-ai-computer-graphics"], "confidence": "high", "status": "official"
+    },
+    {
+      "name": "GeForce RTX 5090", "vendor": "NVIDIA", "segment": "consumer", "architecture": "Blackwell", "releaseDate": "2025-01-30",
+      "vramGB": 32, "memoryType": "GDDR7", "bandwidthGBs": 1792, "busWidth": 512,
+      "fp64": null, "fp32": 104.8, "tf32Dense": 104.8, "tf32Sparse": 209.5, "bf16Dense": 209.5, "bf16Sparse": 419, "fp16Dense": {"value": 419, "accumulate": "FP16", "fp32Accumulate": 209.5}, "fp16Sparse": {"value": 838, "accumulate": "FP16", "fp32Accumulate": 419}, "fp8Dense": {"value": 838, "accumulate": "FP16", "fp32Accumulate": 419}, "fp8Sparse": {"value": 1676, "accumulate": "FP16", "fp32Accumulate": 838}, "fp6": {"dense": 838, "sparse": 1676}, "fp4": {"dense": 1676, "sparse": 3352}, "int8Dense": 838, "int8Sparse": 1676, "int4": null,
+      "computeUnitsSM": 170, "shaderCUDA": 21760, "matrixTensorCores": 680, "rtCores": 170, "interconnect": "PCIe 5.0 x16; no NVLink", "tdpTbp": 575,
+      "msrp": {"amount": 1999, "currency": "USD", "date": "2025-01-06"}, "rentalHourlyUSD": 0.78,
+      "rentalSamples": [{"platform": "RunPod Secure", "price": 0.99}, {"platform": "RunPod Community", "price": 0.69}, {"platform": "Spheron", "price": 0.78}, {"platform": "CloudRift", "price": 0.65}],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8", "FP6", "FP4", "INT8"], "notes": "Exact compute values from official whitepaper. Rental is unweighted mean of four current public samples.",
+      "sources": ["https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf", "https://nvidianews.nvidia.com/news/nvidia-blackwell-geforce-rtx-50-series-opens-new-world-of-ai-computer-graphics", "https://www.runpod.io/articles/guides/ai-server-cost", "https://www.runpod.io/articles/comparison/runpod-vs-cloudrift", "https://www.runpod.io/articles/comparison/runpod-vs-spheron"], "confidence": "high", "status": "official"
+    },
+
+    {
+      "name": "RTX 2000 Ada Generation", "vendor": "NVIDIA", "segment": "workstation", "architecture": "Ada Lovelace", "releaseDate": "2024-02-12",
+      "vramGB": 16, "memoryType": "GDDR6 ECC", "bandwidthGBs": 224, "busWidth": 128,
+      "fp64": null, "fp32": 12, "tf32Dense": 11.99, "tf32Sparse": 23.99, "bf16Dense": 23.99, "bf16Sparse": 47.98, "fp16Dense": {"value": 47.98, "accumulate": "FP16", "fp32Accumulate": 23.99}, "fp16Sparse": {"value": 95.95, "accumulate": "FP16", "fp32Accumulate": 47.98}, "fp8Dense": 95.95, "fp8Sparse": 191.9, "fp6": null, "fp4": null, "int8Dense": 95.95, "int8Sparse": 191.9, "int4": null,
+      "computeUnitsSM": 22, "shaderCUDA": 2816, "matrixTensorCores": 88, "rtCores": 22, "interconnect": "PCIe 4.0 x8", "tdpTbp": 70,
+      "msrp": null, "rentalHourlyUSD": 0.50, "rentalSamples": [{"platform": "RunPod Community", "price": 0.50}],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8", "INT8", "INT4"], "notes": "Official Tensor Performance 191.9 is sparse; dense INT8/FP8 is half. Rental is one-platform observation, not a market mean.",
+      "sources": ["https://www.nvidia.com/en-us/products/workstations/rtx-2000/", "https://www.runpod.io/gpu-models"], "confidence": "medium-high", "status": "derived"
+    },
+    {
+      "name": "RTX 4000 SFF Ada Generation", "vendor": "NVIDIA", "segment": "workstation", "architecture": "Ada Lovelace", "releaseDate": "2023-03-21",
+      "vramGB": 20, "memoryType": "GDDR6 ECC", "bandwidthGBs": 320, "busWidth": 160,
+      "fp64": null, "fp32": 19.2, "tf32Dense": 19.18, "tf32Sparse": 38.35, "bf16Dense": 38.35, "bf16Sparse": 76.7, "fp16Dense": {"value": 76.7, "accumulate": "FP16", "fp32Accumulate": 38.35}, "fp16Sparse": {"value": 153.4, "accumulate": "FP16", "fp32Accumulate": 76.7}, "fp8Dense": 153.4, "fp8Sparse": 306.8, "fp6": null, "fp4": null, "int8Dense": 153.4, "int8Sparse": 306.8, "int4": null,
+      "computeUnitsSM": 48, "shaderCUDA": 6144, "matrixTensorCores": 192, "rtCores": 48, "interconnect": "PCIe 4.0 x16", "tdpTbp": 70,
+      "msrp": null, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8", "INT8", "INT4"], "notes": "Dense tensor values are half of official sparse Tensor Performance.",
+      "sources": ["https://www.nvidia.com/content/dam/en-zz/Solutions/gtcs22/design-visualization/quadro-product-literature/rtx-6000-l40-linecard-nvidia-us-2653097-r7-web.pdf", "https://nvidianews.nvidia.com/news/nvidia-redefines-workstations-to-power-new-era-of-ai-design-industrial-metaverse"], "confidence": "high", "status": "derived"
+    },
+    {
+      "name": "RTX 4000 Ada Generation", "vendor": "NVIDIA", "segment": "workstation", "architecture": "Ada Lovelace", "releaseDate": "2023-10-01",
+      "vramGB": 20, "memoryType": "GDDR6 ECC", "bandwidthGBs": 360, "busWidth": 160,
+      "fp64": null, "fp32": 26.7, "tf32Dense": 26.73, "tf32Sparse": 53.45, "bf16Dense": 53.45, "bf16Sparse": 106.9, "fp16Dense": {"value": 106.9, "accumulate": "FP16", "fp32Accumulate": 53.45}, "fp16Sparse": {"value": 213.8, "accumulate": "FP16", "fp32Accumulate": 106.9}, "fp8Dense": 213.8, "fp8Sparse": 427.6, "fp6": null, "fp4": null, "int8Dense": 213.8, "int8Sparse": 427.6, "int4": null,
+      "computeUnitsSM": 48, "shaderCUDA": 6144, "matrixTensorCores": 192, "rtCores": 48, "interconnect": "PCIe 4.0 x16", "tdpTbp": 130,
+      "msrp": null, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8", "INT8", "INT4"], "notes": "Current 20GB desktop SKU; do not confuse with older 12GB mobile line-card row. Tensor Performance is sparse FP8.",
+      "sources": ["https://www.nvidia.com/en-us/products/workstations/rtx-4000/", "https://nvidianews.nvidia.com/news/nvidia-global-workstation-manufacturers-to-launch-powerful-systems-for-generative-ai-and-llm-development-content-creation-data-science"], "confidence": "high", "status": "derived"
+    },
+    {
+      "name": "RTX 4500 Ada Generation", "vendor": "NVIDIA", "segment": "workstation", "architecture": "Ada Lovelace", "releaseDate": "2023-10-01",
+      "vramGB": 24, "memoryType": "GDDR6 ECC", "bandwidthGBs": 432, "busWidth": 192,
+      "fp64": null, "fp32": 39.6, "tf32Dense": 39.63, "tf32Sparse": 79.25, "bf16Dense": 79.25, "bf16Sparse": 158.5, "fp16Dense": {"value": 158.5, "accumulate": "FP16", "fp32Accumulate": 79.25}, "fp16Sparse": {"value": 317, "accumulate": "FP16", "fp32Accumulate": 158.5}, "fp8Dense": 317, "fp8Sparse": 634, "fp6": null, "fp4": null, "int8Dense": 317, "int8Sparse": 634, "int4": null,
+      "computeUnitsSM": 60, "shaderCUDA": 7680, "matrixTensorCores": 240, "rtCores": 60, "interconnect": "PCIe 4.0 x16", "tdpTbp": 210,
+      "msrp": null, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8", "INT8", "INT4"], "notes": "Dense tensor values are half of official 634 sparse Tensor Performance.",
+      "sources": ["https://www.nvidia.com/en-us/products/workstations/rtx-4500/", "https://www.nvidia.com/content/dam/en-zz/Solutions/products/workstations/nvidia-rtx-4500-datasheet.pdf"], "confidence": "high", "status": "derived"
+    },
+    {
+      "name": "RTX 5000 Ada Generation", "vendor": "NVIDIA", "segment": "workstation", "architecture": "Ada Lovelace", "releaseDate": "2023-08-08",
+      "vramGB": 32, "memoryType": "GDDR6 ECC", "bandwidthGBs": 576, "busWidth": 256,
+      "fp64": null, "fp32": 65.3, "tf32Dense": 65.28, "tf32Sparse": 130.55, "bf16Dense": 130.55, "bf16Sparse": 261.1, "fp16Dense": {"value": 261.1, "accumulate": "FP16", "fp32Accumulate": 130.55}, "fp16Sparse": {"value": 522.2, "accumulate": "FP16", "fp32Accumulate": 261.1}, "fp8Dense": 522.2, "fp8Sparse": 1044.4, "fp6": null, "fp4": null, "int8Dense": 522.2, "int8Sparse": 1044.4, "int4": null,
+      "computeUnitsSM": 100, "shaderCUDA": 12800, "matrixTensorCores": 400, "rtCores": 100, "interconnect": "PCIe 4.0 x16", "tdpTbp": 250,
+      "msrp": null, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8", "INT8", "INT4"], "notes": "Dense tensor values are half of official 1044.4 sparse Tensor Performance.",
+      "sources": ["https://resources.nvidia.com/en-us-briefcase-for-datasheets/rtx-5000-ada-datashe", "https://nvidianews.nvidia.com/news/nvidia-global-workstation-manufacturers-to-launch-powerful-systems-for-generative-ai-and-llm-development-content-creation-data-science"], "confidence": "high", "status": "derived"
+    },
+    {
+      "name": "RTX 6000 Ada Generation", "vendor": "NVIDIA", "segment": "workstation", "architecture": "Ada Lovelace", "releaseDate": "2022-12-01",
+      "vramGB": 48, "memoryType": "GDDR6 ECC", "bandwidthGBs": 960, "busWidth": 384,
+      "fp64": 1.42, "fp32": 91.1, "tf32Dense": 182.1, "tf32Sparse": 364.2, "bf16Dense": 364.2, "bf16Sparse": 728.4, "fp16Dense": {"value": 364.2, "accumulate": "FP16"}, "fp16Sparse": {"value": 728.4, "accumulate": "FP16"}, "fp8Dense": 728.5, "fp8Sparse": 1457, "fp6": null, "fp4": null, "int8Dense": 728.5, "int8Sparse": 1457, "int4": {"dense": 1457, "sparse": 2914},
+      "computeUnitsSM": 142, "shaderCUDA": 18176, "matrixTensorCores": 568, "rtCores": 142, "interconnect": "PCIe 4.0 x16; no NVLink", "tdpTbp": 300,
+      "msrp": null, "rentalHourlyUSD": 0.79, "rentalSamples": [{"platform": "RunPod Secure", "price": 0.84}, {"platform": "RunPod Community", "price": 0.74}, {"platform": "Spheron", "price": 0.78}],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8", "INT8", "INT4"], "notes": "Official full precision table. Rental mean is unweighted public on-demand/community sample mean.",
+      "sources": ["https://images.nvidia.com/aem-dam/en-zz/Solutions/technologies/NVIDIA-ADA-GPU-PROVIZ-Architecture-Whitepaper_1.1.pdf", "https://nvidianews.nvidia.com/news/nvidias-new-ada-lovelace-rtx-gpu-arrives-for-designers-and-creators", "https://www.runpod.io/articles/guides/ai-server-cost", "https://www.runpod.io/articles/comparison/runpod-vs-spheron"], "confidence": "high", "status": "official"
+    },
+
+    {
+      "name": "RTX PRO 2000 Blackwell", "vendor": "NVIDIA", "segment": "workstation", "architecture": "Blackwell", "releaseDate": "2025-08-11",
+      "vramGB": 16, "memoryType": "GDDR7 ECC", "bandwidthGBs": 288, "busWidth": 128,
+      "fp64": null, "fp32": null, "tf32Dense": 17.03, "tf32Sparse": 34.06, "bf16Dense": 34.06, "bf16Sparse": 68.13, "fp16Dense": {"value": 68.13, "accumulate": "FP16", "fp32Accumulate": 34.06}, "fp16Sparse": {"value": 136.25, "accumulate": "FP16", "fp32Accumulate": 68.13}, "fp8Dense": 136.25, "fp8Sparse": 272.5, "fp6": {"dense": 136.25, "sparse": 272.5}, "fp4": {"dense": 272.5, "sparse": 545}, "int8Dense": 136.25, "int8Sparse": 272.5, "int4": null,
+      "computeUnitsSM": null, "shaderCUDA": null, "matrixTensorCores": null, "rtCores": null, "interconnect": "PCIe 5.0", "tdpTbp": 70,
+      "msrp": null, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8", "FP6", "FP4", "INT8"], "notes": "Only FP4 sparse AI TOPS is officially published; lower precision peaks are architecture-ratio derivations, not individual official table values.",
+      "sources": ["https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-2000/", "https://blogs.nvidia.com/blog/blackwell-ai-acceleration-workstation-rtx-pro/"], "confidence": "medium", "status": "derived"
+    },
+    {
+      "name": "RTX PRO 4000 Blackwell SFF Edition", "vendor": "NVIDIA", "segment": "workstation", "architecture": "Blackwell", "releaseDate": "2025-08-11",
+      "vramGB": 24, "memoryType": "GDDR7 ECC", "bandwidthGBs": 432, "busWidth": 192,
+      "fp64": null, "fp32": 24, "tf32Dense": 24.06, "tf32Sparse": 48.13, "bf16Dense": 48.13, "bf16Sparse": 96.25, "fp16Dense": {"value": 96.25, "accumulate": "FP16", "fp32Accumulate": 48.13}, "fp16Sparse": {"value": 192.5, "accumulate": "FP16", "fp32Accumulate": 96.25}, "fp8Dense": 192.5, "fp8Sparse": 385, "fp6": {"dense": 192.5, "sparse": 385}, "fp4": {"dense": 385, "sparse": 770}, "int8Dense": 192.5, "int8Sparse": 385, "int4": null,
+      "computeUnitsSM": null, "shaderCUDA": null, "matrixTensorCores": null, "rtCores": null, "interconnect": "PCIe 5.0", "tdpTbp": 70,
+      "msrp": null, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8", "FP6", "FP4", "INT8"], "notes": "Official 770 AI TOPS is FP4 sparse; FP8/INT8 dense derived as one quarter.",
+      "sources": ["https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-4000-sff/"], "confidence": "medium-high", "status": "derived"
+    },
+    {
+      "name": "RTX PRO 4000 Blackwell", "vendor": "NVIDIA", "segment": "workstation", "architecture": "Blackwell", "releaseDate": "2025-07-01",
+      "vramGB": 24, "memoryType": "GDDR7 ECC", "bandwidthGBs": 672, "busWidth": 192,
+      "fp64": null, "fp32": 40, "tf32Dense": 40.31, "tf32Sparse": 80.63, "bf16Dense": 80.63, "bf16Sparse": 161.25, "fp16Dense": {"value": 161.25, "accumulate": "FP16", "fp32Accumulate": 80.63}, "fp16Sparse": {"value": 322.5, "accumulate": "FP16", "fp32Accumulate": 161.25}, "fp8Dense": 322.5, "fp8Sparse": 645, "fp6": {"dense": 322.5, "sparse": 645}, "fp4": {"dense": 645, "sparse": 1290}, "int8Dense": 322.5, "int8Sparse": 645, "int4": null,
+      "computeUnitsSM": null, "shaderCUDA": null, "matrixTensorCores": null, "rtCores": null, "interconnect": "PCIe 5.0 x16", "tdpTbp": 145,
+      "msrp": null, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8", "FP6", "FP4", "INT8"], "notes": "Official 1290 AI TOPS is FP4 sparse; FP8/INT8 dense derived as one quarter.",
+      "sources": ["https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-4000/"], "confidence": "medium-high", "status": "derived"
+    },
+    {
+      "name": "RTX PRO 4500 Blackwell Workstation Edition", "vendor": "NVIDIA", "segment": "workstation", "architecture": "Blackwell", "releaseDate": "2025-07-01",
+      "vramGB": 32, "memoryType": "GDDR7 ECC", "bandwidthGBs": 896, "busWidth": 256,
+      "fp64": null, "fp32": 51, "tf32Dense": 50.53, "tf32Sparse": 101.06, "bf16Dense": 101.06, "bf16Sparse": 202.13, "fp16Dense": {"value": 202.13, "accumulate": "FP16", "fp32Accumulate": 101.06}, "fp16Sparse": {"value": 404.25, "accumulate": "FP16", "fp32Accumulate": 202.13}, "fp8Dense": 404.25, "fp8Sparse": 808.5, "fp6": {"dense": 404.25, "sparse": 808.5}, "fp4": {"dense": 808.5, "sparse": 1617}, "int8Dense": 404.25, "int8Sparse": 808.5, "int4": null,
+      "computeUnitsSM": 82, "shaderCUDA": 10496, "matrixTensorCores": 328, "rtCores": 82, "interconnect": "PCIe 5.0 x16", "tdpTbp": 200,
+      "msrp": null, "rentalHourlyUSD": 1.15, "rentalSamples": [{"platform": "RunPod Serverless", "price": 1.15}],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8", "FP6", "FP4", "INT8"], "notes": "Official 1617 AI TOPS is sparse FP4; FP8/INT8 dense derived. Datasheet has one conflicting prose bandwidth line (784) but specs table and key-features state 896; 896 retained.",
+      "sources": ["https://www.nvidia.com/content/dam/en-zz/Solutions/data-center/rtx-pro-4500-blackwell/workstation-datasheet-blackwell-rtx-pro-4500-we-nvidia-us-4978450-web-new.pdf", "https://www.runpod.io/pricing"], "confidence": "medium-high", "status": "derived"
+    },
+    {
+      "name": "RTX PRO 5000 Blackwell 48GB", "vendor": "NVIDIA", "segment": "workstation", "architecture": "Blackwell", "releaseDate": "2025-07-01",
+      "vramGB": 48, "memoryType": "GDDR7 ECC", "bandwidthGBs": 1344, "busWidth": 384,
+      "fp64": null, "fp32": 65, "tf32Dense": 64.5, "tf32Sparse": 129, "bf16Dense": 129, "bf16Sparse": 258, "fp16Dense": {"value": 258, "accumulate": "FP16", "fp32Accumulate": 129}, "fp16Sparse": {"value": 516, "accumulate": "FP16", "fp32Accumulate": 258}, "fp8Dense": 516, "fp8Sparse": 1032, "fp6": {"dense": 516, "sparse": 1032}, "fp4": {"dense": 1032, "sparse": 2064}, "int8Dense": 516, "int8Sparse": 1032, "int4": null,
+      "computeUnitsSM": 110, "shaderCUDA": 14080, "matrixTensorCores": 440, "rtCores": 110, "interconnect": "PCIe 5.0 x16", "tdpTbp": 300,
+      "msrp": null, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8", "FP6", "FP4", "INT8"], "notes": "Official 2064 AI TOPS is sparse FP4; lower precision fields derived by RTX Blackwell ratio.",
+      "sources": ["https://www.nvidia.com/content/dam/en-zz/Solutions/products/workstations/professional-desktop-gpus/rtx-pro-5000-blackwell/workstation-datasheet-blackwell-rtx-pro-5000-gtc25-spring-nvidia-3658700.pdf"], "confidence": "medium-high", "status": "derived"
+    },
+    {
+      "name": "RTX PRO 5000 Blackwell 72GB", "vendor": "NVIDIA", "segment": "workstation", "architecture": "Blackwell", "releaseDate": "2025-12-01",
+      "vramGB": 72, "memoryType": "GDDR7 ECC", "bandwidthGBs": 1344, "busWidth": 384,
+      "fp64": null, "fp32": 65, "tf32Dense": 64.5, "tf32Sparse": 129, "bf16Dense": 129, "bf16Sparse": 258, "fp16Dense": {"value": 258, "accumulate": "FP16", "fp32Accumulate": 129}, "fp16Sparse": {"value": 516, "accumulate": "FP16", "fp32Accumulate": 258}, "fp8Dense": 516, "fp8Sparse": 1032, "fp6": {"dense": 516, "sparse": 1032}, "fp4": {"dense": 1032, "sparse": 2064}, "int8Dense": 516, "int8Sparse": 1032, "int4": null,
+      "computeUnitsSM": 110, "shaderCUDA": 14080, "matrixTensorCores": 440, "rtCores": 110, "interconnect": "PCIe 5.0 x16", "tdpTbp": 300,
+      "msrp": null, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8", "FP6", "FP4", "INT8"], "notes": "NVIDIA blog later quotes 2142 AI TOPS for the 72GB revision while June 2026 datasheet lists 2064 for both 48/72GB; datasheet value retained and discrepancy flagged.",
+      "sources": ["https://www.nvidia.com/content/dam/en-zz/Solutions/products/workstations/professional-desktop-gpus/rtx-pro-5000-blackwell/workstation-datasheet-blackwell-rtx-pro-5000-gtc25-spring-nvidia-3658700.pdf", "https://blogs.nvidia.com/blog/rtx-pro-5000-72gb-blackwell-gpu/"], "confidence": "medium", "status": "derived"
+    },
+    {
+      "name": "RTX PRO 6000 Blackwell Workstation Edition", "vendor": "NVIDIA", "segment": "workstation", "architecture": "Blackwell", "releaseDate": "2025-04-01",
+      "vramGB": 96, "memoryType": "GDDR7 ECC", "bandwidthGBs": 1792, "busWidth": 512,
+      "fp64": null, "fp32": 126, "tf32Dense": 125, "tf32Sparse": 250, "bf16Dense": 250, "bf16Sparse": 500, "fp16Dense": {"value": 500, "accumulate": "FP16", "fp32Accumulate": 250}, "fp16Sparse": {"value": 1000, "accumulate": "FP16", "fp32Accumulate": 500}, "fp8Dense": 1000, "fp8Sparse": 2000, "fp6": {"dense": 1000, "sparse": 2000}, "fp4": {"dense": 2000, "sparse": 4000}, "int8Dense": 1000, "int8Sparse": 2000, "int4": null,
+      "computeUnitsSM": 188, "shaderCUDA": 24064, "matrixTensorCores": 752, "rtCores": 188, "interconnect": "PCIe 5.0 x16; MIG; no NVLink listed", "tdpTbp": 600,
+      "msrp": null, "rentalHourlyUSD": 1.73, "rentalSamples": [{"platform": "RunPod Secure", "price": 2.09}, {"platform": "RunPod Community", "price": 1.69}, {"platform": "CloudRift", "price": 1.29}, {"platform": "Hyperstack", "price": 1.85}],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8", "FP6", "FP4", "INT8"], "notes": "4000 AI TOPS is sparse FP4. FP8/INT8 dense=1000 derived from architecture ratio. Rental listings may label RTX Pro 6000 without edition; use with caution.",
+      "sources": ["https://www.nvidia.com/content/dam/en-zz/Solutions/data-center/rtx-pro-6000-blackwell-workstation-edition/workstation-blackwell-rtx-pro-6000-workstation-edition-nvidia-us-3519208-web.pdf", "https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/quadro-product-literature/NVIDIA-RTX-Blackwell-PRO-GPU-Architecture-v1.0.pdf", "https://www.runpod.io/articles/guides/ai-server-cost", "https://www.hyperstack.cloud/gpu-pricing"], "confidence": "medium-high", "status": "derived"
+    },
+
+    {
+      "name": "NVIDIA L2", "vendor": "NVIDIA", "segment": "data-center", "architecture": "Ada Lovelace", "releaseDate": "2023-11-01",
+      "vramGB": 24, "memoryType": "GDDR6 ECC", "bandwidthGBs": 300, "busWidth": null,
+      "fp64": null, "fp32": 24.1, "tf32Dense": 48.3, "tf32Sparse": null, "bf16Dense": 96.5, "bf16Sparse": null, "fp16Dense": {"value": 96.5, "accumulate": "FP16"}, "fp16Sparse": null, "fp8Dense": 193, "fp8Sparse": null, "fp6": null, "fp4": null, "int8Dense": 193, "int8Sparse": null, "int4": null,
+      "computeUnitsSM": null, "shaderCUDA": null, "matrixTensorCores": null, "rtCores": null, "interconnect": "PCIe 4.0 x16; no NVLink", "tdpTbp": null,
+      "msrp": null, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8", "INT8", "INT4"], "notes": "China export SKU. NVIDIA acknowledges model in support docs but does not expose a public product datasheet; peaks from contemporaneous leaked/press table. Keep medium-low confidence.",
+      "sources": ["https://docs.nvidia.com/ai-enterprise/release-7/latest/infra-software/vgpu/reference/index.html", "https://www.tomshardware.com/pc-components/gpus/new-nvidia-ai-gpus-designed-to-get-around-u-s-export-bans-come-to-china-h20-l20-and-l2-to-fill-void-left-by-restricted-models"], "confidence": "medium-low", "status": "secondary"
+    },
+    {
+      "name": "NVIDIA L4", "vendor": "NVIDIA", "segment": "data-center", "architecture": "Ada Lovelace", "releaseDate": "2023-03-21",
+      "vramGB": 24, "memoryType": "GDDR6 ECC", "bandwidthGBs": 300, "busWidth": 192,
+      "fp64": null, "fp32": 30.3, "tf32Dense": 60, "tf32Sparse": 120, "bf16Dense": 121, "bf16Sparse": 242, "fp16Dense": {"value": 121, "accumulate": "FP32"}, "fp16Sparse": {"value": 242, "accumulate": "FP32"}, "fp8Dense": 242, "fp8Sparse": 485, "fp6": null, "fp4": null, "int8Dense": 242, "int8Sparse": 485, "int4": {"dense": 484, "sparse": 969},
+      "computeUnitsSM": 58, "shaderCUDA": 7424, "matrixTensorCores": 232, "rtCores": 58, "interconnect": "PCIe 4.0 x16 64GB/s; no NVLink", "tdpTbp": 72,
+      "msrp": null, "rentalHourlyUSD": 0.47, "rentalSamples": [{"platform": "RunPod Secure", "price": 0.49}, {"platform": "RunPod Community", "price": 0.44}],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8", "INT8", "INT4"], "notes": "Official page explicitly says displayed sparse figures are twice dense. Rental mean uses two RunPod tiers only.",
+      "sources": ["https://www.nvidia.com/en-eu/data-center/l4/", "https://images.nvidia.com/aem-dam/Solutions/geforce/ada/nvidia-ada-gpu-architecture.pdf", "https://www.runpod.io/articles/guides/ai-server-cost"], "confidence": "high", "status": "official"
+    },
+    {
+      "name": "NVIDIA L20", "vendor": "NVIDIA", "segment": "data-center", "architecture": "Ada Lovelace", "releaseDate": "2023-11-01",
+      "vramGB": 48, "memoryType": "GDDR6 ECC", "bandwidthGBs": 864, "busWidth": 384,
+      "fp64": null, "fp32": 59.8, "tf32Dense": 59.8, "tf32Sparse": null, "bf16Dense": 119.5, "bf16Sparse": null, "fp16Dense": {"value": 119.5, "accumulate": "FP16"}, "fp16Sparse": null, "fp8Dense": 239, "fp8Sparse": null, "fp6": null, "fp4": null, "int8Dense": 239, "int8Sparse": null, "int4": null,
+      "computeUnitsSM": null, "shaderCUDA": null, "matrixTensorCores": null, "rtCores": null, "interconnect": "PCIe 4.0 x16; no NVLink", "tdpTbp": 275,
+      "msrp": null, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8", "INT8", "INT4"], "notes": "China export SKU. NVIDIA support docs confirm the product/48GB vGPU, but no public compute datasheet; compute values are secondary contemporaneous reporting.",
+      "sources": ["https://docs.nvidia.com/ai-enterprise/release-7/latest/infra-software/vgpu/reference/index.html", "https://www.tomshardware.com/pc-components/gpus/new-nvidia-ai-gpus-designed-to-get-around-u-s-export-bans-come-to-china-h20-l20-and-l2-to-fill-void-left-by-restricted-models"], "confidence": "medium-low", "status": "secondary"
+    },
+    {
+      "name": "NVIDIA L40", "vendor": "NVIDIA", "segment": "data-center", "architecture": "Ada Lovelace", "releaseDate": "2022-10-01",
+      "vramGB": 48, "memoryType": "GDDR6 ECC", "bandwidthGBs": 864, "busWidth": 384,
+      "fp64": null, "fp32": 90.5, "tf32Dense": 90.5, "tf32Sparse": 181, "bf16Dense": 181, "bf16Sparse": 362, "fp16Dense": {"value": 181, "accumulate": "FP16"}, "fp16Sparse": {"value": 362, "accumulate": "FP16"}, "fp8Dense": 362, "fp8Sparse": 724.1, "fp6": null, "fp4": null, "int8Dense": 362, "int8Sparse": 724.1, "int4": null,
+      "computeUnitsSM": 142, "shaderCUDA": 18176, "matrixTensorCores": 568, "rtCores": 142, "interconnect": "PCIe 4.0 x16; no NVLink", "tdpTbp": 300,
+      "msrp": null, "rentalHourlyUSD": 0.84, "rentalSamples": [{"platform": "RunPod Secure", "price": 0.82}, {"platform": "RunPod Community", "price": 0.69}, {"platform": "Hyperstack", "price": 1.00}],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8", "INT8", "INT4"], "notes": "Compute inferred from official sparse AI performance and Ada ratios; bandwidth/power official. Rental mean unweighted.",
+      "sources": ["https://www.nvidia.com/en-in/data-center/l40/", "https://www.nvidia.com/content/dam/en-zz/Solutions/Data-Center/datasheets/L-40/product-brief-L40.pdf", "https://www.runpod.io/articles/guides/ai-server-cost", "https://www.hyperstack.cloud/gpu-pricing"], "confidence": "high", "status": "derived"
+    },
+    {
+      "name": "NVIDIA L40S", "vendor": "NVIDIA", "segment": "data-center", "architecture": "Ada Lovelace", "releaseDate": "2023-08-08",
+      "vramGB": 48, "memoryType": "GDDR6 ECC", "bandwidthGBs": 864, "busWidth": 384,
+      "fp64": null, "fp32": 91.6, "tf32Dense": 183, "tf32Sparse": 366, "bf16Dense": 362.05, "bf16Sparse": 733, "fp16Dense": {"value": 362.05, "accumulate": "FP32"}, "fp16Sparse": {"value": 733, "accumulate": "FP32"}, "fp8Dense": 733, "fp8Sparse": 1466, "fp6": null, "fp4": null, "int8Dense": 733, "int8Sparse": 1466, "int4": {"dense": 733, "sparse": 1466},
+      "computeUnitsSM": 142, "shaderCUDA": 18176, "matrixTensorCores": 568, "rtCores": 142, "interconnect": "PCIe 4.0 x16 64GB/s; no NVLink", "tdpTbp": 350,
+      "msrp": null, "rentalHourlyUSD": 0.84, "rentalSamples": [{"platform": "RunPod Secure", "price": 1.09}, {"platform": "RunPod Community", "price": 0.79}, {"platform": "CloudRift", "price": 0.63}],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8", "INT8", "INT4"], "notes": "Official page gives both dense and sparse. Rental mean is unweighted across public samples.",
+      "sources": ["https://www.nvidia.com/es-la/data-center/l40s/", "https://www.runpod.io/articles/guides/ai-server-cost", "https://www.runpod.io/articles/comparison/runpod-vs-cloudrift"], "confidence": "high", "status": "official"
+    },
+    {
+      "name": "NVIDIA H20 SXM 96GB", "vendor": "NVIDIA", "segment": "data-center", "architecture": "Hopper", "releaseDate": "2024-02-01",
+      "vramGB": 96, "memoryType": "HBM3", "bandwidthGBs": 4000, "busWidth": null,
+      "fp64": 1, "fp32": 44, "tf32Dense": 74, "tf32Sparse": null, "bf16Dense": 148, "bf16Sparse": null, "fp16Dense": {"value": 148, "accumulate": "FP32"}, "fp16Sparse": null, "fp8Dense": 296, "fp8Sparse": 592, "fp6": null, "fp4": null, "int8Dense": 296, "int8Sparse": null, "int4": null,
+      "computeUnitsSM": null, "shaderCUDA": null, "matrixTensorCores": null, "rtCores": null, "interconnect": "NVLink 4 900GB/s; PCIe 5.0 x16", "tdpTbp": 400,
+      "msrp": null, "rentalHourlyUSD": 1.45, "rentalSamples": [{"platform": "TensorDock", "price": 1.39}, {"platform": "Vast.ai", "price": 1.50}],
+      "nativeFormats": ["FP64", "FP32", "TF32", "BF16", "FP16", "FP8", "INT8"], "notes": "NVIDIA has no public H20 product datasheet. Model/96GB is confirmed in NVIDIA vGPU docs; compute values cross-check independent secondary sources. Rental observations from InferenceBench dated 2026-08/09.",
+      "sources": ["https://docs.nvidia.com/ai-enterprise/release-7/latest/infra-software/vgpu/reference/hopper.html", "https://www.tomshardware.com/pc-components/gpus/new-nvidia-ai-gpus-designed-to-get-around-u-s-export-bans-come-to-china-h20-l20-and-l2-to-fill-void-left-by-restricted-models", "https://inferencebench.io/gpus/nvidia-h20/", "https://flopper.io/gpu/nvidia-h20-96gb/spec-sheet"], "confidence": "medium", "status": "secondary"
+    },
+    {
+      "name": "NVIDIA H100 PCIe 80GB", "vendor": "NVIDIA", "segment": "data-center", "architecture": "Hopper", "releaseDate": "2022-11-16",
+      "vramGB": 80, "memoryType": "HBM2e/HBM3 by board revision", "bandwidthGBs": 2000, "busWidth": 5120,
+      "fp64": 24, "fp32": 48, "tf32Dense": 400, "tf32Sparse": 800, "bf16Dense": 800, "bf16Sparse": 1600, "fp16Dense": {"value": 800, "accumulate": "FP32"}, "fp16Sparse": {"value": 1600, "accumulate": "FP32"}, "fp8Dense": 1600, "fp8Sparse": 3200, "fp6": null, "fp4": null, "int8Dense": 1600, "int8Sparse": 3200, "int4": null,
+      "computeUnitsSM": 114, "shaderCUDA": 14592, "matrixTensorCores": 456, "rtCores": 0, "interconnect": "PCIe 5.0 x16; 2-way NVLink bridge 600GB/s", "tdpTbp": 350,
+      "msrp": null, "rentalHourlyUSD": 2.89, "rentalSamples": [{"platform": "RunPod Secure", "price": 2.89}, {"platform": "Lambda", "price": 3.29}, {"platform": "Hyperstack", "price": 2.50}],
+      "nativeFormats": ["FP64", "FP64 Tensor", "FP32", "TF32", "BF16", "FP16", "FP8 E4M3/E5M2", "INT8"], "notes": "Shipping date used because original announcement was before four-year cutoff. Rental mean happens to round to 2.89.",
+      "sources": ["https://developer.nvidia.com/blog/?p=45555", "https://www.nvidia.com/content/dam/en-zz/Solutions/gtcs22/data-center/h100/PB-11133-001_v01.pdf", "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2023", "https://www.runpod.io/articles/guides/ai-server-cost", "https://lambda.ai/instances", "https://www.hyperstack.cloud/gpu-pricing"], "confidence": "medium-high", "status": "official"
+    },
+    {
+      "name": "NVIDIA H100 SXM 80GB", "vendor": "NVIDIA", "segment": "data-center", "architecture": "Hopper", "releaseDate": "2022-11-16",
+      "vramGB": 80, "memoryType": "HBM3", "bandwidthGBs": 3350, "busWidth": 5120,
+      "fp64": 34, "fp32": 67, "tf32Dense": 494.5, "tf32Sparse": 989, "bf16Dense": 989.5, "bf16Sparse": 1979, "fp16Dense": {"value": 989.5, "accumulate": "FP32"}, "fp16Sparse": {"value": 1979, "accumulate": "FP32"}, "fp8Dense": 1979, "fp8Sparse": 3958, "fp6": null, "fp4": null, "int8Dense": 1979, "int8Sparse": 3958, "int4": null,
+      "computeUnitsSM": 132, "shaderCUDA": 16896, "matrixTensorCores": 528, "rtCores": 0, "interconnect": "NVLink 4 900GB/s; PCIe 5.0 128GB/s", "tdpTbp": 700,
+      "msrp": null, "rentalHourlyUSD": 3.66, "rentalSamples": [{"platform": "RunPod Secure", "price": 3.49}, {"platform": "Lambda", "price": 4.29}, {"platform": "Hyperstack", "price": 3.20}],
+      "nativeFormats": ["FP64", "FP64 Tensor", "FP32", "TF32", "BF16", "FP16", "FP8 E4M3/E5M2", "INT8"], "notes": "NVIDIA current page displays sparse figures; dense is one-half. Shipping date used for cutoff.",
+      "sources": ["https://www.nvidia.com/ja-jp/data-center/h100/", "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2023", "https://www.runpod.io/articles/guides/ai-server-cost", "https://lambda.ai/instances", "https://www.hyperstack.cloud/gpu-pricing"], "confidence": "high", "status": "official"
+    },
+    {
+      "name": "NVIDIA H100 NVL 94GB", "vendor": "NVIDIA", "segment": "data-center", "architecture": "Hopper", "releaseDate": "2023-03-21",
+      "vramGB": 94, "memoryType": "HBM3", "bandwidthGBs": 3900, "busWidth": null,
+      "fp64": 30, "fp32": 60, "tf32Dense": 417.5, "tf32Sparse": 835, "bf16Dense": 835.5, "bf16Sparse": 1671, "fp16Dense": {"value": 835.5, "accumulate": "FP32"}, "fp16Sparse": {"value": 1671, "accumulate": "FP32"}, "fp8Dense": 1670.5, "fp8Sparse": 3341, "fp6": null, "fp4": null, "int8Dense": 1670.5, "int8Sparse": 3341, "int4": null,
+      "computeUnitsSM": null, "shaderCUDA": null, "matrixTensorCores": null, "rtCores": 0, "interconnect": "2/4-way NVLink bridge 900GB/s per GPU; PCIe 5.0", "tdpTbp": 400,
+      "msrp": null, "rentalHourlyUSD": 2.83, "rentalSamples": [{"platform": "RunPod Secure", "price": 3.19}, {"platform": "RunPod Community", "price": 2.59}, {"platform": "Hyperstack H100 NVLink", "price": 2.60}],
+      "nativeFormats": ["FP64", "FP64 Tensor", "FP32", "TF32", "BF16", "FP16", "FP8", "INT8"], "notes": "H100 NVL is a paired PCIe solution; values and VRAM here are per GPU except marketed 188GB pair configurations.",
+      "sources": ["https://www.nvidia.com/ja-jp/data-center/h100/", "https://www.runpod.io/articles/guides/ai-server-cost", "https://www.hyperstack.cloud/gpu-pricing"], "confidence": "high", "status": "official"
+    },
+    {
+      "name": "NVIDIA H200 SXM 141GB", "vendor": "NVIDIA", "segment": "data-center", "architecture": "Hopper", "releaseDate": "2024-06-01",
+      "vramGB": 141, "memoryType": "HBM3e", "bandwidthGBs": 4800, "busWidth": null,
+      "fp64": 34, "fp32": 67, "tf32Dense": 494.5, "tf32Sparse": 989, "bf16Dense": 989.5, "bf16Sparse": 1979, "fp16Dense": {"value": 989.5, "accumulate": "FP32"}, "fp16Sparse": {"value": 1979, "accumulate": "FP32"}, "fp8Dense": 1979, "fp8Sparse": 3958, "fp6": null, "fp4": null, "int8Dense": 1979, "int8Sparse": 3958, "int4": null,
+      "computeUnitsSM": 132, "shaderCUDA": 16896, "matrixTensorCores": 528, "rtCores": 0, "interconnect": "NVLink 4 900GB/s; PCIe 5.0", "tdpTbp": 700,
+      "msrp": null, "rentalHourlyUSD": 4.06, "rentalSamples": [{"platform": "RunPod Secure", "price": 4.59}, {"platform": "RunPod Community", "price": 3.59}, {"platform": "Hyperstack", "price": 3.99}],
+      "nativeFormats": ["FP64", "FP64 Tensor", "FP32", "TF32", "BF16", "FP16", "FP8", "INT8"], "notes": "Same compute as H100 SXM, larger/faster memory. Rental mean unweighted.",
+      "sources": ["https://www.nvidia.com/en-eu/data-center/h200/", "https://www.runpod.io/articles/guides/ai-server-cost", "https://www.hyperstack.cloud/gpu-pricing"], "confidence": "high", "status": "official"
+    },
+    {
+      "name": "NVIDIA H200 NVL 141GB", "vendor": "NVIDIA", "segment": "data-center", "architecture": "Hopper", "releaseDate": "2024-12-01",
+      "vramGB": 141, "memoryType": "HBM3e", "bandwidthGBs": 4800, "busWidth": null,
+      "fp64": 30, "fp32": 60, "tf32Dense": 417.5, "tf32Sparse": 835, "bf16Dense": 835.5, "bf16Sparse": 1671, "fp16Dense": {"value": 835.5, "accumulate": "FP32"}, "fp16Sparse": {"value": 1671, "accumulate": "FP32"}, "fp8Dense": 1670.5, "fp8Sparse": 3341, "fp6": null, "fp4": null, "int8Dense": 1670.5, "int8Sparse": 3341, "int4": null,
+      "computeUnitsSM": null, "shaderCUDA": null, "matrixTensorCores": null, "rtCores": 0, "interconnect": "2/4-way NVLink bridge 900GB/s per GPU; PCIe 5.0", "tdpTbp": 600,
+      "msrp": null, "rentalHourlyUSD": null, "rentalSamples": [],
+      "nativeFormats": ["FP64", "FP64 Tensor", "FP32", "TF32", "BF16", "FP16", "FP8", "INT8"], "notes": "Per-GPU values. Public rental pages often fail to distinguish H200 SXM from NVL; no separate mean assigned.",
+      "sources": ["https://www.nvidia.com/en-eu/data-center/h200/"], "confidence": "high", "status": "official"
+    },
+    {
+      "name": "NVIDIA B200 SXM", "vendor": "NVIDIA", "segment": "data-center", "architecture": "Blackwell", "releaseDate": "2025-01-01",
+      "vramGB": 180, "memoryType": "HBM3e", "bandwidthGBs": 8000, "busWidth": null,
+      "fp64": {"cuda": 37, "tensor": 37}, "fp32": 75, "tf32Dense": 1125, "tf32Sparse": 2250, "bf16Dense": 2250, "bf16Sparse": 4500, "fp16Dense": {"value": 2250, "accumulate": "FP32"}, "fp16Sparse": {"value": 4500, "accumulate": "FP32"}, "fp8Dense": 4500, "fp8Sparse": 9000, "fp6": {"dense": 4500, "sparse": 9000}, "fp4": {"dense": 9000, "sparse": 18000}, "int8Dense": 4500, "int8Sparse": 9000, "int4": null,
+      "computeUnitsSM": null, "shaderCUDA": null, "matrixTensorCores": null, "rtCores": 0, "interconnect": "NVLink 5 1.8TB/s per GPU", "tdpTbp": 1000,
+      "msrp": null, "rentalHourlyUSD": 6.44, "rentalSamples": [{"platform": "RunPod Secure", "price": 6.79}, {"platform": "RunPod Community", "price": 5.98}, {"platform": "Lambda", "price": 6.99}, {"platform": "Hyperstack", "price": 6.00}],
+      "nativeFormats": ["FP64", "FP64 Tensor", "FP32", "TF32", "BF16", "FP16", "FP8", "FP6", "NVFP4", "INT8"], "notes": "Compute is per-GPU derivation from official 8-GPU HGX B200 totals. NVIDIA NIM currently reports 180GB; early collateral used 192GB. Rental mean unweighted.",
+      "sources": ["https://www.nvidia.com/en-au/data-center/hgx/", "https://docs.nvidia.com/enterprise-reference-architectures/whitepaper/hgx-servers-and-spectrum-x.pdf", "https://www.runpod.io/articles/guides/ai-server-cost", "https://lambda.ai/instances", "https://www.hyperstack.cloud/gpu-pricing"], "confidence": "high", "status": "derived"
+    },
+    {
+      "name": "NVIDIA B300 SXM", "vendor": "NVIDIA", "segment": "data-center", "architecture": "Blackwell Ultra", "releaseDate": "2025-09-01",
+      "vramGB": 288, "memoryType": "HBM3e", "bandwidthGBs": 8000, "busWidth": null,
+      "fp64": null, "fp32": 75, "tf32Dense": 1125, "tf32Sparse": 2250, "bf16Dense": 2250, "bf16Sparse": 4500, "fp16Dense": {"value": 2250, "accumulate": "FP32"}, "fp16Sparse": {"value": 4500, "accumulate": "FP32"}, "fp8Dense": 4500, "fp8Sparse": 9000, "fp6": {"dense": 4500, "sparse": 9000}, "fp4": {"dense": 13500, "sparse": 18000}, "int8Dense": null, "int8Sparse": null, "int4": null,
+      "computeUnitsSM": null, "shaderCUDA": null, "matrixTensorCores": null, "rtCores": 0, "interconnect": "NVLink 5 1.8TB/s per GPU", "tdpTbp": null,
+      "msrp": null, "rentalHourlyUSD": 7.41, "rentalSamples": [{"platform": "RunPod Secure", "price": 7.89}, {"platform": "RunPod Community", "price": 6.94}, {"platform": "Hyperstack", "price": 7.40}],
+      "nativeFormats": ["FP64", "FP32", "TF32", "BF16", "FP16", "FP8", "FP6", "NVFP4", "INT8"], "notes": "Official HGX page's INT8 scrape is internally inconsistent (3 POPS vs 72 POPS columns); INT8 left null instead of guessing. Therefore inclusion is provisional on architecture support, not a verified numeric threshold pass. FP4 is official sparse|dense divided by 8 GPUs.",
+      "sources": ["https://www.nvidia.com/en-au/data-center/hgx/", "https://docs.nvidia.com/dgx/dgxb300-user-guide/introduction-to-dgxb300.html", "https://docs.nvidia.com/enterprise-reference-architectures/whitepaper/hgx-servers-and-spectrum-x.pdf", "https://www.runpod.io/articles/guides/ai-server-cost", "https://www.hyperstack.cloud/gpu-pricing"], "confidence": "medium", "status": "official-derived"
+    },
+    {
+      "name": "RTX PRO 6000 Blackwell Server Edition", "vendor": "NVIDIA", "segment": "data-center", "architecture": "Blackwell", "releaseDate": "2025-08-26",
+      "vramGB": 96, "memoryType": "GDDR7 ECC", "bandwidthGBs": 1597, "busWidth": 512,
+      "fp64": null, "fp32": 120, "tf32Dense": 234, "tf32Sparse": null, "bf16Dense": 500, "bf16Sparse": 1000, "fp16Dense": {"value": 500, "accumulate": "FP32"}, "fp16Sparse": {"value": 1000, "accumulate": "FP32"}, "fp8Dense": 1000, "fp8Sparse": 2000, "fp6": {"dense": 1000, "sparse": 2000}, "fp4": {"dense": 2000, "sparse": 4000}, "int8Dense": 1000, "int8Sparse": 2000, "int4": null,
+      "computeUnitsSM": 188, "shaderCUDA": 24064, "matrixTensorCores": 752, "rtCores": 188, "interconnect": "PCIe 5.0 x16; MIG", "tdpTbp": 600,
+      "msrp": null, "rentalHourlyUSD": 1.73, "rentalSamples": [{"platform": "RunPod Secure", "price": 2.09}, {"platform": "RunPod Community", "price": 1.69}, {"platform": "CloudRift", "price": 1.29}, {"platform": "Hyperstack", "price": 1.85}],
+      "nativeFormats": ["FP32", "TF32", "BF16", "FP16", "FP8", "FP6", "FP4", "INT8"], "notes": "Official product page provides FP4/FP8/FP16/BF16 but does not label sparsity inline; values align with sparse FP4=4P and dense FP8=1P architecture ratio. Rental labels may mix server/workstation edition.",
+      "sources": ["https://www.nvidia.com/en-us/data-center/rtx-pro-6000-blackwell-server-edition/", "https://nvidianews.nvidia.com/news/industry-leaders-transform-enterprise-data-centers-for-the-ai-era-with-nvidia-rtx-pro-servers", "https://www.runpod.io/articles/guides/ai-server-cost", "https://www.hyperstack.cloud/gpu-pricing"], "confidence": "medium-high", "status": "derived"
+    }
+  ],
+  "excluded": [
+    {"name": "RTX 3050 8GB", "reason": "announced/released before 2022-09-18"},
+    {"name": "RTX A2000 8GB", "reason": "architecture performance qualifies only marginally, but launch predates window"},
+    {"name": "A100/A30/A40/A10/A16", "reason": "launch predates window even when still sold/rented"},
+    {"name": "GeForce laptop GPUs / RTX professional laptop GPUs", "reason": "excluded by scope normalization: mobile dGPU performance varies by OEM power limit and is not independently rentable"},
+    {"name": "Grace Hopper GH200 / GB200 / GB300 Superchips and NVL rack systems", "reason": "not standalone discrete GPUs; database records standalone accelerator packages instead"},
+    {"name": "RTX 4090 D / 5090 D / 5090 D v2 / RTX 5880 Ada", "reason": "regional China-only derivatives; public official compute tables insufficient or inconsistent. Add in a separate regional-SKU pass."}
+  ]
+}

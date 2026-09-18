@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/manrope";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #f4f6f2;
+  --foreground: #171b18;
+  --card: #fafbf8;
+  --card-foreground: #171b18;
+  --popover: #fafbf8;
+  --popover-foreground: #171b18;
+  --primary: #263a30;
+  --primary-foreground: #f8faf7;
+  --secondary: #e8ece7;
+  --secondary-foreground: #26322b;
+  --muted: #e9ece7;
+  --muted-foreground: #667069;
+  --accent: #dfe7e1;
+  --accent-foreground: #23362c;
+  --destructive: #b73535;
+  --border: #d8ddd7;
+  --border-strong: #c6cec7;
+  --input: #cbd2cb;
+  --ring: #47745c;
+  --radius: .25rem;
+  --font-sans: 'Manrope Variable', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  font-family: var(--font-sans);
+  color: var(--foreground);
+  background: var(--background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+@theme inline {
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) * .75);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) * 1.5);
+  --radius-xl: calc(var(--radius) * 2);
+}
+
+* { box-sizing: border-box; border-color: var(--border); }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: var(--background); }
+button,input,select { font: inherit; }
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+::selection { background: #cbded1; color: #10251a; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #e9ece7; }
+::-webkit-scrollbar-thumb { background: #aab4ac; border: 2px solid #e9ece7; }
